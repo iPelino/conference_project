@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <style>
+          body{
+              text-align: center;
+              font-family: sans-serif
+          }
+
+          .conference{
+              width: 30%;
+              margin: auto;
+              display: flex;
+              justify-content: space-between;
+              align-items:center ;
+          }
+
+          .conference p:first-child{
+              font-size: 22px;
+              font-weight: 700;
+          }
+   </style>
+    <title>Conference | {{ conference.name }}</title>
+  </head>
+  <body>
+    <h1>{{ conference.name }}</h1>
+    <hr/>
+
+    <div class="conference">
+        <p>Date</p>
+        <p>{{ conference.date }}</p>
+    </div>
+
+    <div class="conference">
+        <p>Location</p>
+        <p>{{ conference.location }}</p>
+    </div>
+  </body>
+</html>
