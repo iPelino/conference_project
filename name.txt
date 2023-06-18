@@ -1,0 +1,3 @@
+name: Sekuru wilson
+Reg no: 220002959
+department: Computer Science
