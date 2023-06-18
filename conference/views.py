@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import datetime
 
 conferences = [
         {
@@ -46,7 +47,11 @@ def conference_view(request,id):
     for conf in conferences:
         if conf["id"] == int(id):
             conference = conf
-
-    print(conference)
     return render(request, "conference/conference.html", context={"conference": conference })
 
+def update_conference_view(request,id):
+    conference = None
+    for conf in conferences:
+        if conf["id"] == int(id):
+            conference = conf
+    return render(request, "conference/updateConference.html", context={"conference": conference})

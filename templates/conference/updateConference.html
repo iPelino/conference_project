@@ -37,31 +37,32 @@
       </style>
   </head>
   <body>
-    <h1>Create Conference</h1>
+    <h1>Update Conference</h1>
     <hr/>
 
     <form>
         <div>
             <label>Name: </label>
-            <input type="text" placeholder="Enter name..."/>
+            <input type="text" placeholder="Enter name..." value="{{ conference.name }}"/>
         </div>
 
         <div>
             <label>Location: </label>
-            <input type="text" placeholder="Enter location..."/>
+            <input type="text" placeholder="Enter location..." value="{{ conference.location}}"/>
         </div>
 
         <div>
             <label>Date: </label>
-            <input type="date" placeholder="Enter date..."/>
+
+            <input type="date" placeholder="Enter date..." value="{{ conference.date }}"/>
         </div>
 
         <div>
             <label>Topics: </label>
-            <textarea rows="10" cols="20" placeholder="Enter conference topics..." ></textarea>
+            <textarea rows="10" cols="20" placeholder="Enter conference topics..." >{{ conference.topics }}</textarea>
         </div>
 
-        <button type="button">Save</button>
+        <button type="button">Update</button>
     </form>
 
   </body>
