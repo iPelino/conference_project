@@ -1,12 +1,10 @@
-from django.urls import path, re_path
-from core import views
-urlpatterns = [
-    # www.conference.rw
-    path('', views.home_view, name='home'),
-    path('<str:number>/', views.testing_stuff, name='testing'),
-    # path('<pk:id>/', views.testing_stuff, name='testing'),
-    # path('<slug:slug>/', views.testing_stuff, name='testing'),
+from django.urls import path
+from . import views
 
-    # www.conference.rw/about/
-    path('about/', views.about_view, name='about'),
+urlpatterns = [
+    path('conference/', views.list_conference, name='list_conference'),
+    path('conference/<int:id>/', views.single_conference, name='single_conference'),
+    path('conference/<int:id>/update', views.update_conference, name='update_conference'),
+    path('conference/create/', views.Add_conference, name='Add_conference'),
+    path('conference/<int:id>/delete', views.remove_conference, name='remove_conference'),
 ]
