@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body{
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+    .conference_list_container {
+      display: grid;
+      width: 100;
+      grid-template-columns: repeat(3, minmax(8rem, 1fr));
+      grid-column-gap: 2rem;
+      grid-row-gap: 2rem;
+      width: 80%;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+
+    .conference_box {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      min-width: 8rem;
+      /* gap: 1rem; */
+      border: none;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    .conference_box h3 span {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #555;
+    }
+
+    .conference_box h3 span a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .conference_box h3 span a:hover {
+      text-decoration: underline;
+    }
+
+    .conference_box p {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #555;
+    }
+
+    .conference_box p span {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #333;
+    }
+
+    .conference_box p span a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .conference_box p span a:hover {
+      text-decoration: underline;
+    }
+
+    .conference_box .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      background-color: #333;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-container{
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 60%;
+    }
+    a{
+      text-decoration: none;
+    }
+    .conference_box .btn:hover {
+      background-color: #555;
+    }
+
+    .conference_box .btn:active {
+      transform: scale(0.95);
+    }
+
+    .conference_box .btn:focus {
+      outline: none;
+    }
+
+    .conference_box .btn a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .conference_box .btn a:hover {
+      text-decoration: underline;
+    }
+
+    .conference_box .btn a:active {
+      transform: scale(0.95);
+    }
+
+    .conference_box .btn a:focus {
+      outline: none;
+    }
+
+    .conference_box .btn.delete {
+      background-color: #f00;
+    }
+
+    .conference_box .btn.delete:hover {
+      background-color: #f55;
+    }
+
+    .conference_box .btn.delete:active {
+      transform: scale(0.95);
+    }
+
+    .conference_box .btn.delete:focus {
+      outline: none;
+    }
+  </style>
+  <body>
+    <h1 style="text-align: center;">Upcoming Conferences</h1>
+    <div class="conference_list_container">
+      {%for conference in conferences%}
+      <div class="conference_box">
+        <p>Name: {{conference.name}}</p>
+        <p>City: {{conference.city}}</p>
+        <p>Country: {{conference.country}}</p>
+        <a href="/conferences/{{ conference.id }}">See details</a>
+        <div class="btn-container">
+          <a href="/conferences/{{ conference.id }}/update" class="btn update">Update</a>
+          <a href="/conferences/{{ conference.id }}/delete" class="btn delete">Delete</a>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+  </body>
+</html>
