@@ -44,6 +44,8 @@ def conference_id(request,id):
     return render(request, 'conferenceId.html')
 def conference_update(request,id):
     return render(request, 'conferenceUpdate.html')
+def  conference_delete_view(request,id)
+    return render(request, 'conferenceDelete.html')
 
 
 
