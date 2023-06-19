@@ -2,26 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        .List {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .conference {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .conference h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .conference p {
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .conference div {
+            display: flex;
+            justify-content: space-between;
+            color: #999;
+        }
+
+        .conference div span {
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Home Page</h1>
-    <br>
-    <a href="{% url 'about' %}">About us</a>
-    <hr>
-    <h2>{{ data }}</h2>
-    {% for y in data %}
-        {% if y == 'django' %}
-            <h1>{{ y }}</h1>
-        {% else %}
-            <h4>{{ y }}</h4>
-        {% endif %}
-
-    {% endfor %}
-
-
+    <h1>List of conferences</h1>
+    <section>
+        <ul class="List">
+            {% for conference in conferences %}
+                <li class="conference">
+                    <h2>{{conference.name}}</h2>
+                    <p>{{conference.location}}</p>
+                    <div>
+                        <span>{{conference.start}}</span>
+                        <span>{{conference.end}}</span>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
 </body>
 </html>

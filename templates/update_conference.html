@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .input {
+            margin-bottom: 20px;
+            width:95%;
+        }
+
+        .input span {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .input input[type="text"],
+        .input input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .input input[type="date"] {
+            font-family: Arial, sans-serif;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 16px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <div class="input">
+            <span>Conference name</span>
+            <input type="text" name="conference_name" value="{{conference.name}}" id="">
+        </div>
+        <div class="input">
+            <span>Location</span>
+            <input type="text" name="location_name" value="{{conference.location}}" id="">
+        </div>
+        <div class="input">
+            <span>Start Date</span>
+            <input type="date" name="start_date" value="{{conference.start}}" id="">
+        </div>
+        <div class="input">
+            <span>End Date</span>
+            <input type="date" name="end_date" value="{{conference.end}}" id="">
+        </div>
+        <div>
+            <button type="submit">Schedule</button>
+        </div>
+    </form>
+</body>
+</html>

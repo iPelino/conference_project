@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .conference {
+      background-color: #f5f5f5;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+
+    .conference h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .conference p {
+      margin-bottom: 10px;
+    }
+
+    .conference div {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <h1>Conference</h1>
+  <div>
+    <ul>
+      <li class="conference">
+        <h2>{{conference.name}}</h2>
+        <p>{{conference.location}}</p>
+        <div>
+            <span>{{conference.start}}</span>
+            <span>{{conference.end}}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
