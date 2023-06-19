@@ -56,4 +56,4 @@ def conference_delete(request, conference_id):
     for item in conferences:
          if (item["id"] == conference_id):
             selectedData = item
-    return render(request, 'conference_delete.html', {'conference': selectedData})￼Enter
+    return render(request, 'conference_delete.html', {'conference': selectedData})
