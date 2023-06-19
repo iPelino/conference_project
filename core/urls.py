@@ -6,6 +6,10 @@ urlpatterns = [
     path('conferences/',views.all_conference_view,name='conference'),
       path('conferences/create/',views.create_conference,name='create'),
        path("conferences/<int:conference_id>/details/",views.conference_detail,name='detail'),
+        path("conferences/<int:conference_id>/update/",views.update_conference,name='update'),
+         path("conferences/<int:conference_id>/delete/",views.delete_conference,name='delete'),
+
+
 
     path('<str:number>/', views.testing_stuff, name='testing'),
     # path('<pk:id>/', views.testing_stuff, name='testing'),
