@@ -155,6 +155,6 @@ def speaker_delete(request, id):
         },
     }
 
-    speakers.pop(int(id))
-    return redirect('list_of_speakers')
+    speaker = speakers.get(int(id))
+    return render(request, 'speaker/delete.html', {'speaker': speaker})
 
