@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conference</title>
+</head>
+<body>
+    <h1>speakers</h1><hr/>
+    <table>
+        <tr>
+           <th>number</th>
+           <th>speaker_name</th>
+           <th>speaker_bio</th>
+           <th>speakers_constact</th>
+        </tr>
+
+        {% for conf in speakers %}
+    <tr>
+        <td>{{conf.id}}</td>
+        <td>{{conf.name}}</td>
+        <td>{{conf.bio}}</td>
+        <td>{{conf.contact}}<td>
+    </tr>
+   
+    {% endfor %}
+
+
+    </table>
+    
+</body>
+</html>
