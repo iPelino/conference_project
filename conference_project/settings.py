@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # apps
     'core',
     'speakers',
+    'conference',
 ]
 
 MIDDLEWARE = [

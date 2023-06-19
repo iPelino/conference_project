@@ -25,5 +25,6 @@ urlpatterns = [
 
     path('', include('core.urls')),
     path('speakers/', include('speakers.urls')),
+    path('conference/', include('confirence.urls')),
 
 ]
