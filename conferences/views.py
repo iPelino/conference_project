@@ -36,3 +36,5 @@ conferences = [
     ]
 def conferences_available(request):
     return render(request, 'myconferences.html', context={"conferences": conferences})
+def new_conference(request):
+    return render(request, "conference_creation.html")
