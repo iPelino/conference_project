@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Conference List</title>
+    </head>
+    <body>
+        <h2>Create Conference</h2>
+        <form method="POST" action="{% url 'conference:new_conference' %}">
+            {% csrf_token %}<br>
+            <label for="name">Conference Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="dates">Date:</label>
+            <input type="text" id="dates" name="dates" required><br><br>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required><br><br>
+            <label for="topics">Topics:</label>
+            <input type="text" id="topics" name="topics" required><br><br>
+            <input type="submit" value="Create Conference">
+        </form>
+    </body>
+    </body>
+</html>

@@ -24,3 +24,6 @@ def testing_stuff(request, number):
 def all_conferences(request):
     conferences = Conference.objects.all()
     return render(request, 'conference/conferences.html', {'conferences': conferences})
+
+def new_conference(request):
+    return render(request, 'conference/new_conference.html')
