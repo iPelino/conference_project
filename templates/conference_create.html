@@ -5,6 +5,17 @@
 </head>
 <body>
     <h1>Create Conference</h1>
-    <!-- Add form fields for creating a conference -->
+    <form action="/create-conference" method="POST">
+        <label for="conference-name">Conference Name:</label>
+        <input type="text" id="conference-name" name="conference-name" required>
+
+        <label for="conference-date">Conference Date:</label>
+        <input type="date" id="conference-date" name="conference-date" required>
+
+        <label for="conference-location">Conference Location:</label>
+        <input type="text" id="conference-location" name="conference-location" required>
+
+        <button type="submit">Create</button>
+    </form>
 </body>
 </html>
