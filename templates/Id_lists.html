@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+</head>
+<body>
+    <b>ID</b>&nbsp;&nbsp;&nbsp; <b>Name</b>&nbsp;&nbsp;&nbsp; <b>Date</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp; <b>Location</b>
+    {% for key,value in lists.items %}
+            {% if key == id %}
+        <p>{{key}}&nbsp;&nbsp;&nbsp;{{ value.co_name}} &nbsp;&nbsp;&nbsp;{{value.co_date}}&nbsp;&nbsp;&nbsp;{{value.co_location}}</p>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
