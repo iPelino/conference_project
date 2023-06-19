@@ -1,10 +1,28 @@
-from django.urls import path
-from . import views
+"""
+URL configuration for conference_project project.
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/4.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path, include
+from core import views
 
 urlpatterns = [
-    path('conferences/', views.conference_list, name='conference_list'),
-    path('conferences/create/', views.conference_create, name='conference_create'),
-    path('conferences/<int:conference_id>/', views.conference_details, name='conference_details'),
-    path('conferences/<int:conference_id>/update/', views.conference_update, name='conference_update'),
-    path('conferences/<int:conference_id>/delete/', views.conference_delete, name='conference_delete'),
+    # www.conference.rw/admin/
+    path('admin/', admin.site.urls),
+
+
+    path('', include('core.urls'))
+
 ]
