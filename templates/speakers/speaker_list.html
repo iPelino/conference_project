@@ -1,0 +1,11 @@
+<!-- speakers/templates/speakers/speaker_list.html -->
+
+<h1>List of Speakers</h1>
+
+{% for speaker in speakers %}
+  <div class="speaker-card">
+    <h2>{{ speaker.name }}</h2>
+    <p>{{ speaker.bio }}</p>
+    <p>Contact: {{ speaker.contact_info }}</p>
+  </div>
+{% endfor %}
