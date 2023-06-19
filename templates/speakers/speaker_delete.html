@@ -1,0 +1,51 @@
+<style>
+    .delete-container {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 400px;
+    }
+  
+    h1 {
+      margin-bottom: 20px;
+    }
+  
+    p {
+      margin-bottom: 20px;
+    }
+  
+    .confirmation-form {
+      display: inline-block;
+    }
+  
+    .confirmation-form button {
+      background-color: #f44336;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    .confirmation-form button:hover {
+      background-color: #d32f2f;
+    }
+  
+    .cancel-link {
+      display: inline-block;
+      margin-left: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+</style>
+
+<div class="delete-container">
+  <button onclick="history.back()">Go back</button>
+  <h1>Delete Speaker</h1>
+  <p>Are you sure you want to delete this speaker?</p>
+  <!-- Add a confirmation form for deleting the speaker -->
+  <form class="confirmation-form" method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+    <a class="cancel-link">Cancel</a>
+  </form>
+</div>
