@@ -40,6 +40,8 @@ def conferences_view(request):
     return render(request, 'conference/conferences.html', context={"conferences": conferences})
 def create_conference_view(request):
     return render(request, 'createConference.html')
+def conference_id(request,id):
+    return render(request, 'conferenceId.html')
 
 
 
