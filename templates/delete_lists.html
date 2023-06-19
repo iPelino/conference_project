@@ -6,10 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+
     {% for key,value in lists.items %}
     {% if key == id %}
+    <script>alert('sure to delete this: {{key}},{{value.co_name}}, {{value.co_date}},  {{value.co_location}} ')</script>
     <form>
-    <h1><u>UPDATE NEW CONFERENCE</u></h1>
+    <h1><u>DELETE CONFERENCE</u></h1>
     <label>Conference id</label>
     <input type="text" width="100" value="{{key}}"><br>
     <label>Conference name</label>
@@ -20,7 +22,7 @@
     <input type="text" width="100"value="{{value.co_location}}"><br>
     <label>Topic</label>
     <input type="text" width="100"><br>
-    <input type="submit" value="UPDATE"><input type="reset" value="RESET">
+    <input type="submit" value="DELETE">
 
     </form>
     {% endif %}

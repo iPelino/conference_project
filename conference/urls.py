@@ -5,4 +5,5 @@ urlpatterns = [
     path('create/',views.create_conference),
     path('<str:id>/',views.Id_conference),
     path('<str:id>/update',views.list_update),
+    path('<str:id>/delete',views.list_delete),
 ]
