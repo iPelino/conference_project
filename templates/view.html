@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All conferences</title>
+  </head>
+  <body>
+    <h1>Conference List</h1>
+
+<ul>
+  {% for conference in conferences %}
+    <li>
+      <h2>{{ conference.name }}</h2>
+      <p>Dates: {{ conference.dates }}</p>
+      <p>Location: {{ conference.location }}</p>
+    </li>
+  {% empty %}
+    <li>No conferences available.</li>
+  {% endfor %}
+</ul>
+  </body>
+</html>
