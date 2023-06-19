@@ -46,3 +46,10 @@ def conference_view(request,id):
         if conf["id"] == int(id):
             conference = conf
     return render(request, "conf_detail.html", context={"conference": conference })
+
+def update_conference(request,id):
+    conference = None
+    for conf in conferences:
+        if conf["id"] == int(id):
+            conference = conf
+    return render(request, "conference_update.html", context={"conference": conference})
