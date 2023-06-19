@@ -1,0 +1,6 @@
+<h1> list of conferences</h1>
+    <ul>
+        {% for x in my_conference %}
+        <li>name: {{x.name}}, {{x.location}},  {{x.dates}}, {{x.topic}} </li>
+        {%endfor%}
+    </ul>
