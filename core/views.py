@@ -46,8 +46,20 @@ def render_conference_list(request):
     return render(request, 'home.html', {"conferences": conferences});
 
 def create_conference(request):
-    """" Create a new Conferencing """
+    """
+    Create a new Conferencing 
+    """
     return render(request, 'create_conference.html')
+
+def render_conference(request, conference_id: int):
+    """
+    render a specific conference
+    """
+    for conference in conferences:
+        if conference.get('id') == conference_id:
+            return render(request,'conference.html', {"conference": conference})
+    return render(request, 'error.html', {"error": "Conference not found"}) 
+    
 
 
 

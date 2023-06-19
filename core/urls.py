@@ -4,7 +4,7 @@ urlpatterns = [
     # www.conference.rw
     path('', views.render_conference_list, name='home'),
     path('create/', views.create_conference, name='scheduler'),
-    
+    path('<int:conference_id>/', views.render_conference, name="conference details"),
 ]
 
     # path('<str:number>/', views.testing_stuff, name='testing'),
