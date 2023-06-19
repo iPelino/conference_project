@@ -16,4 +16,8 @@ def create_speaker(request):
     return render(request, 'speakers/create_speaker.html')
 
 
+def speaker_details(request, speaker_id):
+    # Retrieve speaker information based on speaker_id (dummy data)
+    speaker = {"id": speaker_id, "name": "Speaker", "bio": "Bio", "contact": "Contact"}
+    return render(request, "speakers/speaker_details.html", {"speaker": speaker})
 
