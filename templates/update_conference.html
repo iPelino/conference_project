@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    body {
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem auto;
+    }
+    form{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    input {
+        width: 100%;
+      display: block;
+      margin: 1rem 0;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+  </style>
+  <body>
+    <h1 style="text-align: center;">Update Conference</h1>
+    {%if conference%}
+    <div class="container">
+      <form method="POST">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value="{{conference.name}}"
+          required
+        />
+        <label for="city">City:</label>
+        <input
+          type="text"
+          id="city"
+          name="city"
+          value="{{conference.city}}"
+          required
+        />
+        <label for="country">Country:</label>
+        <input
+          type="text"
+          id="country"
+          name="country"
+          value="{{conference.country}}"
+          required
+        />
+        <button type="submit">Update</button>
+        {%endif%}
+      </form>
+    </div>
+  </body>
+</html>

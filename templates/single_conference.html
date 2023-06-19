@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Conference Details</title>
+  </head>
+  <style>
+    .single_conf{
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .conference_box {
+      width: 50%;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      align-items: start;
+      min-width: 8rem;
+      /* gap: 1rem; */
+      border: none;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  <body>
+    <h1 style="text-align: center">Conference Details</h1>
+    <div class="single_conf">
+    <div class="conference_box">
+      {% if conference %}
+      <h2>{{ conference.name }}</h2>
+      <p><strong>City:</strong> {{ conference.city }}</p>
+      <p><strong>Country:</strong> {{ conference.country }}</p>
+      <p><strong>Date:</strong> {{ conference.date }}</p>
+      <p>
+        <strong>URL:</strong>
+        <a href="{{ conference.url }}">{{ conference.url }}</a>
+      </p>
+      {% else %}
+      <p>Conference not found.</p>
+      {% endif %}
+    </div>
+    </div>
+  </body>
+</html>
