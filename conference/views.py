@@ -10,3 +10,6 @@ def listconference(request):
                 }
     return render(request, 'view_conference.html',{'conference':conferences})
 
+def create_conference(request):
+    return render(request, 'create_conference.html')
+

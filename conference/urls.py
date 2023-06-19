@@ -4,5 +4,6 @@ from conference import views
 
 urlpatterns = [
     path('', views.listconference, name='view_conferences'),
+    path('create/', views.create_conference, name='create')
 
 ]
