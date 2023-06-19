@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update {{conference.name}}</title>
+</head>
+<body>
+    <div class="conference_update_container">
+        <h1 class="conference_update_heading">
+            Update {{conference.name}}
+        </h1>
+        <form class="conference_update_form" action="{% url 'conference_update_confirm' conference.id %}" method="POST">
+            <div class="input_container">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="{{conference.name}}">
+            </div>
+            <div class="input_container">
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date" value="{{conference.date}}">
+            </div>
+            <div class="input_container">
+                <label for="Venue">Venue</label>
+                <input type="text" name="city" id="venue" value="{{conference.city}}">
+            </div>
+            <div class="input_container">
+                <label for="participants">Participants</label>
+                <input type="text" name="attendees" id="participants" value="{{conference.attendees}}">
+            </div>
+            <div class="input_container">
+                {%csrf_token%}
+                <input type="submit" value="Update" class="conference_update">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

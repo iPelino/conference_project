@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create {{conference.name}}</title>
+</head>
+<body>
+    <div class="conference_update_container">
+        <h1 class="conference_update_heading">
+            Create Conference
+        </h1>
+        <form class="conference_update_form" action="/index.html">
+            <div class="input_container">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="input_container">
+                <label for="date">Date</label>
+                <input type="date" name="description" id="description">
+            </div>
+            <div class="input_container">
+                <label for="Venue">Venue</label>
+                <input type="text" name="venue" id="venue">
+            </div>
+            <div class="input_container">
+                <label for="participants">Participants</label>
+                <input type="text" name="participants" id="participants">
+            </div>
+            <div class="input_container">
+                <a href="/conferences" class="conference_create">Create</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete {{conference.name}}</title>
+</head>
+
+<body>
+    <div class="conference_details_container">
+        <h1>{{conference.name}}</h1>
+        <p>Date: {{conference.date}}</p>
+        <p>Venue: {{conference.city}}</p>
+        <p>Number of participants: {{conference.attendees}}</p>
+        <form action="{% url 'conference_delete_confirm' conference.id %}" class="conference_delete_form" method="POST">
+            {%csrf_token%}
+            <input class="conference_delete" type="submit" value="Delete">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{conference.name}}</title>
+</head>
+<body>
+    <div class="conference_details_container">
+        <h1>{{conference.name}}</h1>
+        <p>Date: {{conference.date}}</p>
+        <p>Venue: {{conference.city}}</p>
+        <p>Number of participants: {{conference.attendees}}</p>
+    </div>
+    <div class="conference_details_update">
+        <p>The details above are provided by our community. You may also update or delete an event from below.</p>
+        <span>
+            <a id="conference_update" href="./update">Update</a>
+            <a id="conference_delete" href="./delete">Delete</a>
+        </span>
+    </div>
+</body>
+
+</html>
