@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Conference</title>
+</head>
+<body>
+    <h1>Delete Conference</h1>
+    <p>Are you sure you want to delete the conference "{{ conference.name }}"?</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>
