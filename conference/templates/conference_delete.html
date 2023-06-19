@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{conference.name}}</title>
+    <title>Delete {{conference.name}}</title>
 </head>
 <style>
     * {
@@ -41,7 +41,7 @@
     .conference_details_container h1 {
         font-size: 5rem;
         padding: 2rem 0;
-        background-image: linear-gradient(to right, #EA4D89, black, #EA4D89);
+        background-image: linear-gradient(to right, red, black, red);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -51,40 +51,26 @@
         padding: 1rem 0;
     }
 
-    .conference_details_update {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    .conference_details_update p {
-        font-size: 1.6rem;
-        padding: 1rem 0;
-    }
-
-    .conference_details_update span {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-    }
-
-    .conference_details_update a {
-        font-size: 1.6rem;
-        padding: 1rem 1rem;
-        background-color: black;
+    .conference_delete {
+        padding: 1rem 2rem;
+        background-color: red;
         color: white;
-        text-decoration: none;
+        outline: none;
+        border: none;
+        font-size: 2rem;
         border-radius: .5rem;
+        cursor: pointer;
     }
 
-    .conference_details_update a:hover {
+    .conference_delete:hover {
         transform: scale(1.02);
     }
 
-    #conference_delete {
-        background-color: rgb(255, 0, 0, 1)
+    .conference_delete_form {
+        margin: 2rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 </style>
 
@@ -94,13 +80,10 @@
         <p>Date: {{conference.date}}</p>
         <p>Venue: {{conference.city}}</p>
         <p>Number of participants: {{conference.attendees}}</p>
-    </div>
-    <div class="conference_details_update">
-        <p>The details above are provided by our community. You may also update or delete an event from below.</p>
-        <span>
-            <a id="conference_update" href="./update">Update</a>
-            <a id="conference_delete" href="./delete">Delete</a>
-        </span>
+        <form action="{% url 'conference_delete_confirm' conference.id %}" class="conference_delete_form" method="POST">
+            {%csrf_token%}
+            <input class="conference_delete" type="submit" value="Delete">
+        </form>
     </div>
 </body>
 

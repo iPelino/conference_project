@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference not found</title>
+</head>
+<style>
+    * {
+        font-size: 62.5%;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        height: auto;
+        min-height: 90vh;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 0;
+        gap: 4rem;
+    }
+
+    .conference_heading {
+        font-size: 5rem;
+        padding: 2rem 0;
+        background-image: linear-gradient(to right, #85A389, black, #85A389);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .conference_navigation {
+        padding: 1rem 2rem;
+        background-color: black;
+        text-decoration: none;
+        color: white;
+        outline: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        border-radius: .5rem;
+    }
+
+    .conference_navigation:hover {
+        background-color: #344035;
+        transform: scale(1.02);
+    }
+</style>
+<body>
+    <h1 class="conference_heading">
+        The conference you are looking for does not exist
+    </h1>
+    <a href="/conferences" class="conference_navigation">Browse all events</a>
+</body>
+</html>

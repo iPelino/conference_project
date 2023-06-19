@@ -96,24 +96,25 @@
         <h1 class="conference_update_heading">
             Update {{conference.name}}
         </h1>
-        <form class="conference_update_form">
+        <form class="conference_update_form" action="{% url 'conference_update_confirm' conference.id %}" method="POST">
             <div class="input_container">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" value="{{conference.name}}">
             </div>
             <div class="input_container">
                 <label for="date">Date</label>
-                <input type="date" name="description" id="description" value="{{conference.date}}">
+                <input type="date" name="date" id="date" value="{{conference.date}}">
             </div>
             <div class="input_container">
                 <label for="Venue">Venue</label>
-                <input type="text" name="venue" id="venue" value="{{conference.city}}">
+                <input type="text" name="city" id="venue" value="{{conference.city}}">
             </div>
             <div class="input_container">
                 <label for="participants">Participants</label>
-                <input type="text" name="participants" id="participants" value="{{conference.attendees}}">
+                <input type="text" name="attendees" id="participants" value="{{conference.attendees}}">
             </div>
             <div class="input_container">
+                {%csrf_token%}
                 <input type="submit" value="Update" class="conference_update">
             </div>
         </form>

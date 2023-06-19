@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-# Create your views here.
 conferences = [
     {
         "id": 1,
@@ -41,15 +40,48 @@ conferences = [
 ]
 
 def conference_details(request, conference_id: int):
-    conference = list(filter(lambda c: c['id'] == conference_id, conferences))[0]
-    return render(request, 'conference_details.html', {'conference': conference})
+    try:
+        conference = list(filter(lambda c: c['id'] == conference_id, conferences))[0]
+        return render(request, 'conference_details.html', {'conference': conference})
+    except IndexError:
+        return render(request, 'conference_not_found.html')
 
-def home(request):
-    return render(request, 'index.html', {'conferences': conferences})
+def conference(request):
+    return render(request, 'conferences.html', {'conferences': conferences})
 
-def update_page(request, conference_id: int):
-    conference = list(filter(lambda c: c['id'] == conference_id, conferences))[0]
-    return render(request, 'conference_update.html', {'conference': conference})
+def conference_update(request, conference_id: int):
+    try:
+        conference = list(filter(lambda c: c['id'] == conference_id, conferences))[0]
+        return render(request, 'conference_update.html', {'conference': conference})
+    except IndexError:
+        return render(request, 'conference_not_found.html')
 
-def create_page(request):
+def conference_update_confirm(request, conference_id: int):
+    try:
+        if (request.method == 'POST'):
+            conference = list(filter(lambda c: c['id'] == conference_id, conferences))[0]
+            conference['name'] = request.POST['name']
+            conference['date'] = request.POST['date']
+            conference['city'] = request.POST['city']
+            conference['attendees'] = request.POST['attendees']
+            return redirect(f'/conferences/{conference_id}', {'conference': conference})
+        return render(request, 'conferences.html', {'conferences': conferences})
+    except IndexError:
+        return render(request, 'conference_not_found.html')
+
+def conference_create(request):
     return render(request, 'conference_create.html')
+
+def conference_delete(request, conference_id: int):
+    try:
+        conference = list(filter(lambda c: c['id'] == conference_id, conferences))[0]
+        return render(request, 'conference_delete.html', {'conference': conference})
+    except IndexError:
+        return render(request, 'conference_not_found.html')
+
+def conference_delete_confirm(request, conference_id: int):
+    if (request.method == 'POST'):
+        conference = list(filter(lambda c: c['id'] == conference_id, conferences))[0]
+        conferences.remove(conference)
+        return redirect('conferences')
+    return render(request, 'conferences.html', {'conferences': conferences})
