@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Conference</title>
+</head>
+<body>
+  <h2>Update Conference</h2>
+  {% for k,v in conf.items %}
+  <tr>
+      {% if k == id1 %}
+
+          <form>
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" value="{{ k }}"><br><br>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="{{v.cname}}"><br><br>
+                <label for="date">Date:</label>
+                <input type="text" id="date" name="date" value="{{v.date}}"><br><br>
+                
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" value="{{v.location}}" ><br><br>
+            
+                
+                <input type="submit" value="Submit">
+              </form>
+  </tr>
+
+  {% endif %}
+  {% endfor %}
+
+</body>
+</html>
