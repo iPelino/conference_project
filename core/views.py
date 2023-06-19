@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
 conferences = [
@@ -46,7 +45,9 @@ def render_conference_list(request):
     """
     return render(request, 'home.html', {"conferences": conferences});
 
-
+def create_conference(request):
+    """" Create a new Conferencing """
+    return render(request, 'create_conference.html')
 
 
 

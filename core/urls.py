@@ -3,6 +3,7 @@ from core import views
 urlpatterns = [
     # www.conference.rw
     path('', views.render_conference_list, name='home'),
+    path('create/', views.create_conference, name='scheduler'),
     
 ]
 
