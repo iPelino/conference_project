@@ -5,6 +5,7 @@ urlpatterns = [
     
     path('', views.home_view, name='home'),
     path('conferences/create/', views.conference, name='create'),
+    path("conferences/<int:conference_id>/update/",views.update_conference,name='update'),
     path('conferences/', views.conference_list, name='conference'),
     path('conferences/create/',views.conference,name='create'),
     path("conferences/<int:conference_id>/",views.conference_detail,name='detail'),
