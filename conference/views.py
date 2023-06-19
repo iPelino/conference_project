@@ -53,3 +53,11 @@ def update_conference(request,id):
         if conf["id"] == int(id):
             conference = conf
     return render(request, "conference_update.html", context={"conference": conference})
+
+def delete_conference(request,id):
+    conference = None
+    for conf in conferences:
+        if conf["id"] == int(id):
+            conference = conf
+    return render(request, "delete_conference.html", context={"conference" : conference})
+
