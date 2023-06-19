@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .speaker {
+        margin-bottom: 30px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      .speaker h2 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .speaker p {
+        margin-top: 10px;
+        color: #666;
+      }
+      .speaker-info {
+        margin-bottom: 20px;
+      }
+      .speaker-info h2 {
+        color: #333;
+      }
+      .speaker-info p {
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="speaker-info">
+      <h2>{{ speaker.name }}</h2>
+      <p><strong>Bio:</strong> {{ speaker.bio }}</p>
+      <p><strong>Other Information:</strong> {{ speaker.other_info }}</p>
+    </div>
+  </body>
+</html>

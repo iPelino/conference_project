@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .speaker {
+        margin-bottom: 30px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      .speaker h2 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .speaker p {
+        margin-top: 10px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>List of Speakers</h1>
+
+    {% for speaker in speakers %}
+    <div class="speaker">
+      <h2>{{ speaker.name }}</h2>
+      <p><strong>Bio:</strong> {{ speaker.bio }}</p>
+      <p><strong>Other Information:</strong> {{ speaker.other_info }}</p>
+    </div>
+    {% endfor %}
+  </body>
+</html>
