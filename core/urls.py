@@ -1,12 +1,16 @@
-from django.urls import path, re_path
-from core import views
-urlpatterns = [
-    # www.conference.rw
-    path('', views.home_view, name='home'),
-    path('<str:number>/', views.testing_stuff, name='testing'),
-    # path('<pk:id>/', views.testing_stuff, name='testing'),
-    # path('<slug:slug>/', views.testing_stuff, name='testing'),
+from django.urls import path
+from conference.views import (
+    ConferenceListView,
+    ConferenceCreateView,
+    ConferenceDetailView,
+    ConferenceUpdateView,
+    ConferenceDeleteView,
+)
 
-    # www.conference.rw/about/
-    path('about/', views.about_view, name='about'),
+urlpatterns = [
+    path('conferences/', ConferenceListView.as_view(), name='conference_list'),
+    path('conferences/create/', ConferenceCreateView.as_view(), name='conference_create'),
+    path('conferences/<int:pk>/', ConferenceDetailView.as_view(), name='conference_detail'),
+    path('conferences/<int:pk>/update/', ConferenceUpdateView.as_view(), name='conference_update'),
+    path('conferences/<int:pk>/delete/', ConferenceDeleteView.as_view(), name='conference_delete'),
 ]
