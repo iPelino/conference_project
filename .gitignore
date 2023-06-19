@@ -5,7 +5,7 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
-
+umulisa221004202;/
 # Local History for Visual Studio Code
 .history/
 
@@ -360,4 +360,7 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+
+v_env
+umulisa221004202
 
