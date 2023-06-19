@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Conference list</h1>
+    <ul>
+        {% for conf in conference %}
+        <li>name: {{conf.name}}</li>
+        <li>Location: {{conf.location}} </li>
+        <li>About: {{conf.description}}</li>   
+        <li>Hoster: {{conf.hoster}} </li> 
+        <li>Date: {{conf.dates}} </li>
+        {%endfor%}
+    </ul>
+    
+
+</body>
+</html>

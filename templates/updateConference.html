@@ -1,0 +1,19 @@
+<h1>update conference</h1>
+
+<form method="post" style="display: grid; width: 40px;">
+    <ul>
+        {% for conf in conference %}
+        <li>name: {{conf.name}}</li>
+        <input type="text">
+        <li>Location: {{conf.location}} </li>
+        <input type="text">
+        <li>About: {{conf.description}}</li>   
+        <input type="text">
+        <li>Hoster: {{conf.hoster}} </li> 
+        <input type="text">
+        <li>Date: {{conf.dates}} </li>
+        <input type="date" >
+        {%endfor%}
+    </ul>
+    <button type="submit">save</button>
+</form>
