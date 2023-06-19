@@ -1,20 +1,28 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from conference.models import Conference
 
+class ConferenceListView(ListView):
+    model = Conference
+    template_name = 'conference/conference_list.html'
 
-def home_view(request):
-    data = ['django', 'laravel', 'asp.net core', 'express']
-    return render(request, 'home.html', {'data': data})
+class ConferenceCreateView(CreateView):
+    model = Conference
+    template_name = 'conference/conference_form.html'
+    fields = ['name', 'dates', 'location', 'topics']
+    success_url = reverse_lazy('conference_list')
 
+class ConferenceDetailView(DetailView):
+    model = Conference
+    template_name = 'conference/conference_detail.html'
 
-def about_view(request):
-    return HttpResponse("<h1>About Page</h1><br><a href='/'>Go back to home</a>")
+class ConferenceUpdateView(UpdateView):
+    model = Conference
+    template_name = 'conference/conference_form.html'
+    fields = ['name', 'dates', 'location', 'topics']
+    success_url = reverse_lazy('conference_list')
 
-
-def testing_stuff(request, number):
-    # DB query
-    #
-    # number = ''
-    # if id < 5:
-    #     number = 'xzy'
-    return render(request, 'testing.html', {'number': number})
+class ConferenceDeleteView(DeleteView):
+    model = Conference
+    template_name = 'conference/conference_delete.html'
+    success_url = reverse_lazy('conference_list')
