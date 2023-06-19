@@ -40,8 +40,10 @@ def conferences_view(request):
 def create_conference_view(request):
     return render(request, 'create_confs.html')
 
-def conference_id(request):
+def conference_id(request,id):
     return render(request, 'confs_id.html')
 
-def conference_update(request):
+def conference_update(request,id):
     return render(request, 'confs_update.html')
+def conference_delete_view(request,id):
+    return render(request, 'confs_delete.html')
