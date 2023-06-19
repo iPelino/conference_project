@@ -60,3 +60,6 @@ def delete_conference_view(request,id):
         if conf["id"] == int(id):
             conference = conf
     return render(request, "conference_removal.html", context={"conference" : conference})
+
+def confirm_delete_view(request, id):
+    return render(request, "confirm_deletion.html")
