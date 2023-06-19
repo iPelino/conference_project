@@ -39,6 +39,10 @@ def conference_list(request):
     }
     return render(request, 'conference/conference_list.html', context)
 
+def create_conference(request):
+    return render(request, 'conference/create_conference.html')
+
+
 def home_view(request):
     data = ['django', 'laravel', 'asp.net core', 'express']
     return render(request, 'home.html', {'data': data})
