@@ -51,3 +51,9 @@ def single_conference (request, id: int):
 def update_conference (request, id: int):
     conference = list(filter(lambda c: c['id'] == id, conferences))[0]
     return render (request, "update_conference.html", { "conference": conference })
+
+
+def delete_conference (request, id: int):
+    conference = list(filter(lambda c: c['id'] == id, conferences))[0]
+    return render (request, "delete_conference.html", { "conference": conference })
+
