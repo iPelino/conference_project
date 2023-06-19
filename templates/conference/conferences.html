@@ -17,7 +17,7 @@
             <p>{{ conference.date }}</p>
             <p>{{ conference.location }}</p>
         </li>
-       <p> <a href="{% url 'conference_delete' key %}">Delete</a><a href="{% url 'conference_update' key %}">update.</a></p>
+       <p> <a href="{% url 'conference_delete' key %}">Delete</a>   <a href="{% url 'conference_update' key %}">update.</a></p>
     {% endfor %}
     </ul>
 
