@@ -13,3 +13,11 @@ def speaker_list(request):
         {"id": 5, "name": "Speaker 5", "bio": "Bio 5", "contact": "Contact 5"},
     ]
     return render(request, "speakers/speaker_list.html", {"speakers": speakers})
+def update_speaker(request, speaker_id):
+    # Retrieve speaker information based on speaker_id (dummy data)
+    speaker = {"id": speaker_id, "name": "Speaker", "bio": "Bio", "contact": "Contact"}
+    return render(request, "speakers/update_speaker.html", {"speaker": speaker})
+
+# def delete_speaker(request, speaker_id):
+
+#     return render(request, 'speakers/speaker_delete.html')

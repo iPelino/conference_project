@@ -1,4 +1,4 @@
-from django.urls import path, re_path, include
+from django.urls import path, re_path
 from core import views
 urlpatterns = [
     # www.conference.rw
@@ -9,5 +9,5 @@ urlpatterns = [
 
     # www.conference.rw/about/
     path('about/', views.about_view, name='about'),
-    path('', include('speakers.urls'))
+    
 ]
