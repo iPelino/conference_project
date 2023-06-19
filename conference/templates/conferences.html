@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The conference management project</title>
+    <style>
+        body{
+            background-color: rgba(183, 230, 230, 0.807);
+        }
+        h1,h2{
+            text-align: center;
+        }
+        .main{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 50px auto;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .main > div{
+            flex: 45%;
+            margin: 50px auto;
+            padding: 10px;
+            margin-left: 20px;
+            border: 1px solid green;
+        }
+        .span2{
+            float:right;
+        }
+        p{
+            text-align:center;
+        }
+        #create{
+            font-size: 20px;
+            text-align: center;
+            background-color: rgb(58, 159, 58);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #create >a{
+            text-decoration: none;
+            color: black;
+        }
+        #create:hover{
+            background-color: aqua;
+            opacity: 0.5;
+            transform: translateY(3px);
+        }
+    </style>
+</head>
+<body>
+    <button id="create"><img src="create.png" width="30" height="30">  <a href="create.html">Create New Conference</a></button>
+    <h1><u>CONFERENCE LIST</u></h1>
+    <div class="main">
+        <div>
+           <h2><a href="#muhabura">MUHABURA CONFERENCE</a></h2>
+           <p>This conference will be held by main speaker who will introduce all leaders<br> 
+            who just want to tell audience some speech</p>
+            <span class="span1">Date:</span><input type="date" name="date", value="2023-06-23" disabled>
+            <span class="span2">Location:<input type="text" value="NYARUGENGE Campus" disabled> </span>
+            
+        </div>
+        <div>
+            <h2><a href="#kalisimbi">KALISIMBI CONFERENCE</a></h2>
+            <p>This conference will be held by main speaker who will introduce all leaders<br> 
+                who just want to tell audience some speech</p>
+             <span class="span1">Date:</span><input type="date" name="date", value="2023-07-10" disabled>
+             <span class="span2">Location:<input type="text" value="NYARUGENGE Campus" disabled> </span>
+             
+         </div>
+         <div>
+            <h2><a href="#agaciro">AGACIRO CONFERENCE</a></h2><br>
+            <p>This conference will be held by main speaker who will introduce all leaders<br> 
+                who just want to tell audience some speech</p>
+             <span class="span1">Date:</span><input type="date" name="date", value="2023-07-13" disabled>
+             <span class="span2">Location:<input type="text" value="NYARUGENGE Campus" disabled> </span>
+             
+         </div>
+         <div>
+            <h2><a href="#kamp">KAMP-KIGALI CONFERENCE</a></h2>
+            <p>This conference will be held by main speaker who will introduce all leaders<br> 
+                who just want to tell audience some speech</p>
+             <span class="span1">Date:</span><input type="date" name="date", value="2023-07-16" disabled>
+             <span class="span2">Location:<input type="text" value="KAMP-KIGALI" disabled> </span>
+             
+         </div>
+         <div>
+            <h2><a href="#koica">KOICA CONFERENCE</a></h2>
+            <p>This conference will be held by main speaker who will introduce all leaders<br> 
+                who just want to tell audience some speech</p>
+             <span class="span1">Date:</span><input type="date" name="date", value="2023-07-27" disabled>
+             <span class="span2">Location:<input type="text" value="BK-ARENA" disabled> </span>
+             
+         </div>
+    </div>
+</body>
+</html>
