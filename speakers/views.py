@@ -49,4 +49,9 @@ def speakers_view(request):
     return render(request, 'speakers/speakers.html', context={"speakers": speakers})
 def create_speaker_view(request):
     return render(request, "speakers/createSpeaker.html")
-
+def speaker_view(request,id):
+    speaker = None
+    for spek in speakers:
+        if spek["id"] == int(id):
+            speaker = spek
+    return render(request, "speakers/speaker.html", context={"speaker": speaker })
