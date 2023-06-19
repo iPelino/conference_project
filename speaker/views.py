@@ -57,3 +57,9 @@ def speaker(request,id):
         # if speak.id == int(id):
             sp = speak
     return render(request, 'speaker.html',{"speaker":sp})
+def update_speaker(request,id):
+    speaker = None
+    for spek in speakers:
+        if spek["id"] == int(id):
+            speaker = spek
+    return render(request, "updateSpeaker.html",{"speaker": speaker})
