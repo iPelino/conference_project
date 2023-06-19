@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Conference</title>
+  </head>
+  <body>
+    <h1>Update Conference</h1>
+    <form action="/create-conference" method="POST">
+      <label for="conference-name">Conference Name:</label>
+      <input
+        type="text"
+        id="conference-name"
+        name="conference-name"
+        required
+        value="{{data.name}}"
+      />
+
+      <label for="conference-date">Conference Date:</label>
+      <input
+        type="text"
+        id="conference-date"
+        name="conference-date"
+        required
+        value="{{data.date}}"
+      />
+
+      <label for="conference-location">Conference Location:</label>
+      <input
+        type="text"
+        id="conference-location"
+        name="conference-location"
+        value="{{data.location}}"
+        required
+      />
+
+      <button type="submit">Update</button>
+    </form>
+  </body>
+    </html>
