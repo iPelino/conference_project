@@ -70,7 +70,14 @@ def update_conference(request, conference_id: int):
             return render(request, 'update_conference.html', {"conference": conference})
     return render(request, 'error.html', {"error": "Conference not found"}) 
 
-
+def delete_conference(request, conference_id: int):
+    """
+    remove a conference from the conferences list
+    """
+    for conference in conferences:
+        if conference.get('id') == conference_id:
+            return render(request, 'delete_conference.html', {"conference": conference})
+    return render(request, 'error.html', {"error": "Conference not found"}) 
 
 
 
