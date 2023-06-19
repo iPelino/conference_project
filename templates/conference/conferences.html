@@ -5,19 +5,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Testing stuff</title>
+    <title>Conferences</title>
 </head>
 <body>
-     <h1>Speaker List</h1>
+     <h1>conferences List</h1>
 
     <ul>
-    {% for key,speaker in speakers.items %}
+    {% for key,conference in conferences.items %}
         <li>
-            <h3>{{ speaker.name }}</h3>
-            <p>{{ speaker.bio }}</p>
-            <p>{{ speaker.other_info }}</p>
+            <h3>{{ conference.name }}</h3>
+            <p>{{ conference.date }}</p>
+            <p>{{ conference.location }}</p>
         </li>
-       <p> <a href="{% url 'speaker_delete' key %}">Delete</a><a href="{% url 'speaker_update' key %}">update.</a></p>
+       <p> <a href="{% url 'conference_delete' key %}">Delete</a><a href="{% url 'conference_update' key %}">update.</a></p>
     {% endfor %}
     </ul>
 

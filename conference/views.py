@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-conferances = {
+conferences = {
         1: {
             'name': 'Chogam',
             'date': '12/12/2022',
@@ -120,7 +120,7 @@ def conference_update(request, id):
 
 
 
-def conferance_delete(request, id):
+def conference_delete(request, id):
     conferances = {
         1: {
             'name': 'Chogam',
@@ -150,5 +150,5 @@ def conferance_delete(request, id):
     }
 
     conference = conferences.get(int(id))
-    return render(request, 'conferences/delete.html', {'conferance': conference})
+    return render(request, 'conference/delete.html', {'conference': conference})
 
