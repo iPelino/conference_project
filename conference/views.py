@@ -1,14 +1,15 @@
 from django.shortcuts import render
+
 conferences = [
         {
             "id": 1,
-            "name": "Introduction to AI",
+            "name": "Gils in ICT",
             "date": "2023-03-12",
             "location": "CcHUB"
         },
         {
             "id": 2,
-            "name": "Gils in ICT",
+            "name": "Introduction to AI",
             "date": "2023-12-12",
             "location": "BK Arena"
         },
@@ -38,3 +39,10 @@ def conferences_list(request):
 
 def create_new_conference(request):
     return render(request, "new_conference.html")
+
+def conference_view(request,id):
+    conference = None
+    for conf in conferences:
+        if conf["id"] == int(id):
+            conference = conf
+    return render(request, "conf_detail.html", context={"conference": conference })
