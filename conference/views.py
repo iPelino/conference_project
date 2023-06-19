@@ -39,7 +39,7 @@ def index(request):
     return render (request, "index.html", {'conferences': conferences})
 
 
-def new(request):
-    return HttpResponse("new")
+def create(request):
+    return render (request, "create_conference.html")
 
 
