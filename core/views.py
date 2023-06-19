@@ -3,44 +3,16 @@ from django.shortcuts import render
 
 def conference_list(request):
     conferences = [
-        {
-            'id': 0,
-            'name': 'Conference A',
-            'dates': 'June 1-3, 2023',
-            'location': 'City V',
-        },
-        {
-            'id': 1,
-            'name': 'Conference B',
-            'dates': 'July 10-12, 2023',
-            'location': 'City W',
-        },
-        {
-            'id': 2,
-            'name': 'Conference C',
-            'dates': 'August 5-7, 2023',
-            'location': 'City X',
-        },
-        {
-            'id': 3,
-            'name': 'Conference D',
-            'dates': 'August 5-7, 2023',
-            'location': 'City Y',
-        },
-        {
-            'id': 4,
-            'name': 'Conference E',
-            'dates': 'August 5-7, 2023',
-            'location': 'City Z',
-        },
+        {'id': 1, 'name': 'Conference A', 'dates': 'June 1-3, 2023', 'location': 'City X'},
+        {'id': 2, 'name': 'Conference B', 'dates': 'July 5-7, 2023', 'location': 'City Y'},
+        {'id': 3, 'name': 'Conference C', 'dates': 'August 10-12, 2023', 'location': 'City Z'},
+        {'id': 4, 'name': 'Conference D', 'dates': 'September 15-17, 2023', 'location': 'City W'},
+        {'id': 5, 'name': 'Conference E', 'dates': 'October 20-22, 2023', 'location': 'City V'}
     ]
     context = {
         'conferences': conferences
     }
     return render(request, 'conference/conference_list.html', context)
-
-def create_conference(request):
-    return render(request, 'conference/create_conference.html')
 
 def conference_details(request, conference_id):
     conference = {
@@ -55,6 +27,9 @@ def conference_details(request, conference_id):
         'conference': conference
     }
     return render(request, 'conference/conference_details.html', context)
+
+def create_conference(request):
+    return render(request, 'conference/create_conference.html')
 
 def update_conference(request, conference_id):
     conference = {
