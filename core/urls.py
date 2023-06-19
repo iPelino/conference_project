@@ -23,4 +23,7 @@ urlpatterns = [
 
      path("conferences/<int:conference_id>/",views.conference_detail,name='detail'),
 
+
+     path("conferences/<int:conference_id>/update/",views.update_conference,name='update'),
+
 ]
