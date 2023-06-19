@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      body {
+        text-align: center;
+        font-family: sans-serif;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+        text-align: left;
+      }
+
+      table {
+        width: 50%;
+        margin: auto;
+        margin-top: 60px;
+      }
+    </style>
+    <title>Speakers | All Speakers</title>
+  </head>
+  <body>
+    <h1>Speakers</h1>
+
+    <hr />
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Email</th>
+        <th>Birthdate</th>
+      </tr>
+
+      {% for speaker in speakers %}
+      <tr>
+        <td>{{ speaker.name }}</td>
+        <td>{{ speaker.country }}</td>
+        <td>{{ speaker.email }}</td>
+        <td>{{ speaker.birthdate }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

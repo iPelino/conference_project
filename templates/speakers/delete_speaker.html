@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Speaker | Delete Speaker</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      .conference {
+        width: 30%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .conference p:first-child {
+        font-size: 22px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ conference.name }}</h1>
+    <hr />
+    <div>
+      <div class="conference">
+        <p>Name</p>
+        <p>{{ speaker.name }}</p>
+      </div>
+
+      <div class="conference">
+        <p>Email</p>
+        <p>{{ speaker.email }}</p>
+      </div>
+      <a href="delete-confirm/">Delete</a>
+    </div>
+  </body>
+</html>
