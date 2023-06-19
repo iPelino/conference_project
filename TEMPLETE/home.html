@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MY WEB</title>
+</head>
+<body>
+    <h1>HOME</h1>
+    <br>
+    <a href="{% url 'About' %}">About us</a>
+    <hr>
+    <h2>{{ data }}</h2>
+    {% for L in data %}
+        {% if L == 'django' %}
+            <h1>{{ L }}</h1>
+        {% else %}
+            <h3>{{ L }}</h3>
+        {% endif %}
+
+    {% endfor %}
+
+
+</body>
+</html>
