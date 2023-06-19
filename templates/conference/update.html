@@ -5,22 +5,22 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register</title>
+    <title>Update</title>
 </head>
 <body>
-     <h1>Update Speaker</h1>
+     <h1>Update Conference</h1>
     <form method="POST">
   {% csrf_token %}
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" value="{{ speaker.name }}"><br>
+  <input type="text" id="name" name="name" value="{{ conference.name }}"><br>
 
-  <label for="bio">Bio:</label>
-  <textarea id="bio" name="bio">{{ speaker.bio }}</textarea><br>
+  <label for="bio">date:</label>
+  <textarea id="bio" name="bio">{{ conference.date }}</textarea><br>
 
-  <label for="other_info">Other Info:</label>
-  <input type="text" id="other_info" name="other_info" value="{{ speaker.other_info }}"><br>
+  <label for="other_info">Location:</label>
+  <input type="text" id="other_info" name="other_info" value="{{ conference.conference }}"><br>
 
-  <button type="submit">Update Speaker</button>
+  <button type="submit">Update conference</button>
 </form>
 </body>
 </html>
