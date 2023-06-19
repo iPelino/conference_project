@@ -1,0 +1,18 @@
+<!-- conference_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conference List</title>
+</head>
+<body>
+    <h1>Conference List</h1>
+    <ul>
+        {% for conference in conferences %}
+            <li>
+                <h2>{{ conference.name }}</h2>
+                
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
