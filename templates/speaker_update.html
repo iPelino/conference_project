@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Conference | Create Conference</title>
+
+      <style>
+          body{
+              text-align: center;
+              font-family: sans-serif
+          }
+
+
+          form{
+              gap: 15px;
+              width: 50%;
+              margin: auto;
+              margin-top: 40px;
+              text-align: left;
+          }
+
+          form div, form{
+              display: flex;
+              flex-direction: column;
+          }
+
+          form input, button, textarea{
+              padding: 10px;
+          }
+
+      </style>
+  </head>
+  <body>
+    <h1>Update Conference</h1>
+    <hr/>
+
+    <form>
+        <div>
+            <label>Name: </label>
+            <input type="text" placeholder="Enter name..." value="{{ conference.name }}"/>
+        </div>
+
+        <div>
+            <label>Location: </label>
+            <input type="text" placeholder="Enter location..." value="{{ conference.location}}"/>
+        </div>
+
+        <div>
+            <label>Date: </label>
+
+            <input type="date" placeholder="Enter date..." value="{{ conference.date }}"/>
+        </div>
+
+        <div>
+            <label>Topics: </label>
+            <textarea rows="10" cols="20" placeholder="Enter conference topics..." >{{ conference.topics }}</textarea>
+        </div>
+
+        <button type="button">Update</button>
+    </form>
+
+  </body>
+</html>

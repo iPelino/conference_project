@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>speakers | All speakers
+
+    </title>
+  </head>
+  <body>
+    <h1>speakers
+
+    </h1>
+
+    <hr/>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Date</th>
+        </tr>
+
+        {% for speakers in speakers
+           %}
+            <tr>
+                <td>{{ speakers.name }}</td>
+                <td>{{ speakers.location }}</td>
+                <td>{{ speakers.date }}</td>
+            </tr>
+        {% endfor %}
+
+
+    </table>
+
+  </body>
+</html>
