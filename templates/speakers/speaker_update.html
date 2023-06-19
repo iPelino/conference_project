@@ -1,0 +1,63 @@
+<style>
+    .form-container {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 400px;
+    }
+  
+    form {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  
+    .form-group {
+      margin-bottom: 10px;
+    }
+  
+    label {
+      display: block;
+      font-weight: bold;
+    }
+  
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+  
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+</style>
+<button onclick="history.back()" type="submit">Go back</button>
+<h1>Update Speaker</h1>
+<div class="form-container">
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" value="{{ speaker.name }}">
+    </div>
+    <div class="form-group">
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="bio">{{ speaker.bio }}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact Information:</label>
+      <input type="text" id="contact" name="contact" value="{{ speaker.contact }}">
+    </div>
+    <button type="submit">Update</button>
+  </form>
+</div>

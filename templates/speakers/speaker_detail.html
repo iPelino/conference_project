@@ -1,0 +1,47 @@
+<style>
+    .back-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    .back-button:hover {
+      background-color: #45a049;
+    }
+  
+    h1 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      margin-bottom: 10px;
+    }
+  
+    .update-link,
+    .delete-link {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+  
+    .update-link:hover,
+    .delete-link:hover {
+      background-color: #45a049;
+    }
+</style>
+
+<button class="back-button" onclick="history.back()">Go back</button>
+<h1>{{ speaker.name }}</h1>
+<p>Bio: {{ speaker.bio }}</p>
+<p>Contact: {{ speaker.contact }}</p>
+<!-- Add more details as required -->
+<a href="{% url 'speakers:speaker_update' speaker.id %}" class="update-link">Update</a>
+<a href="{% url 'speakers:speaker_delete' speaker.id %}" class="delete-link">Delete</a>

@@ -1,0 +1,63 @@
+<style>
+    /* CSS Stylesheet */
+    .speaker-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+  
+    .speaker-item {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+  
+    .speaker-item:hover {
+      background-color: #f1f1f1;
+    }
+  
+    .speaker-details {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .create-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+    
+      .create-button:hover {
+        background-color: #45a049;
+      }
+</style>
+
+<h1>Speaker List</h1>
+<ul class="speaker-list">
+  {% for speaker in speakers %}
+  <li class="speaker-item">
+    <a href="{% url 'speakers:speaker_detail' speaker.id %}">
+      <div class="speaker-details">
+        <span>Name:</span> {{ speaker.name }}
+      </div>
+      <div class="speaker-details">
+        <span>Bio:</span> {{ speaker.bio }}
+      </div>
+      <div class="speaker-details">
+        <span>Location:</span> {{ speaker.location }}
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'speakers:speaker_create' %}" class="create-button">Create Speaker</a>
