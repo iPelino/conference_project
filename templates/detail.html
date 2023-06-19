@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conference Details</title>
+</head>
+<body>
+  <h1>Conference Details</h1>
+
+  <h2>Conference Name: <span id="conferenceName"></span></h2>
+  <p>Date: <span id="conferenceDate"></span></p>
+  <p>Location: <span id="conferenceLocation"></span></p>
+  
+  <script>
+    // JavaScript code to populate conference details
+    var conferenceDetails = {
+      name: "Einstein Conference",
+      date: "5-05-2024 to 7-05-2023",
+      location: "kigali-kicukiro",
+      
+    };
+
+    // Set conference details using JavaScript
+    document.getElementById("conferenceName").textContent = conferenceDetails.name;
+    document.getElementById("conferenceDate").textContent = conferenceDetails.date;
+    document.getElementById("conferenceLocation").textContent = conferenceDetails.location;
+    
+  </script>
+</body>
+</html>
