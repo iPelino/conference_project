@@ -1,0 +1,12 @@
+<h1>List of Conferences</h1>
+<ul>
+{% for conference in conferences %}
+    <li>
+        <strong>{{ conference.name }}</strong>
+        <br>
+        Dates: {{ conference.dates }}
+        <br>
+        Location: {{ conference.location }}
+    </li>
+{% endfor %}
+</ul>

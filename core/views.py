@@ -1,9 +1,35 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from django.views import Conference
 
 def home_view(request):
-    data = ['django', 'laravel', 'asp.net core', 'express']
+    data = [
+        {
+            'name': 'Conference 1',
+            'dates': 'October 1-3, 2023',
+            'location': 'Rusizi',
+        },
+        {
+            'name': 'Conference 2',
+            'dates': 'November 5-7, 2023',
+            'location': 'Gasabo',
+        },
+        {
+            'name': 'Conference 3',
+            'dates': 'December 10-12, 2023',
+            'location': 'Kirehe',
+        },
+        {
+            'name': 'Conference 4',
+            'dates': 'January 15-17, 2024',
+            'location': 'Gisozi',
+        },
+        {
+            'name': 'Conference 5',
+            'dates': 'February 20-22, 2024',
+            'location': 'Kabuga',
+        },
+    ]
     return render(request, 'home.html', {'data': data})
 
 
@@ -18,3 +44,9 @@ def testing_stuff(request, number):
     # if id < 5:
     #     number = 'xzy'
     return render(request, 'testing.html', {'number': number})
+def list(request):
+    conferences = Conference.objects.all()
+    return render(request, 'conference/list.html', {'conferences': conferences})
+
+def create(request):
+    return render(request, 'conference/create.html')
