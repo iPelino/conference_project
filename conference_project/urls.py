@@ -21,6 +21,7 @@ from core import views
 urlpatterns = [
     # www.conference.rw/admin/
     path('admin/', admin.site.urls),
+    path('', include('speakers.urls')),
 
 
     path('', include('core.urls'))
