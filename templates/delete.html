@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conference List</title>
+</head>
+<body>
+  <h1>Upcoming Conferences</h1>
+
+  <ul id="conferenceList">
+    <li>Conference 1 <button onclick="deleteConference(this)">Delete</button></li>
+    <li>Conference 2 <button onclick="deleteConference(this)">Delete</button></li>
+    <li>Conference 3 <button onclick="deleteConference(this)">Delete</button></li>
+    <li>Conference 4 <button onclick="deleteConference(this)">Delete</button></li>
+    <li>Conference 5 <button onclick="deleteConference(this)">Delete</button></li>
+  </ul>
+
+  <script>
+    // JavaScript code to delete conferences
+    function deleteConference(button) {
+      button.parentNode.remove();
+    }
+  </script>
+</body>
+</html>
