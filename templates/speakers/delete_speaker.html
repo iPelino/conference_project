@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>speaker | Delete speaker</title>
+    <style>
+                  body{
+              text-align: center;
+              font-family: sans-serif
+          }
+
+          .speaker{
+              width: 30%;
+              margin: auto;
+              display: flex;
+              justify-content: space-between;
+              align-items:center ;
+          }
+
+          .speaker p:first-child{
+              font-size: 22px;
+              font-weight: 700;
+          }
+    </style>
+</head>
+<body>
+    <h1>{{ speaker.name }}</h1>
+    <hr/>
+    <div>
+        <div class="speaker">
+        <p>Date</p>
+        <p>{{ speaker.date }}</p>
+    </div>
+
+    <div class="speaker">
+        <p>Location</p>
+        <p>{{ speaker.location }}</p>
+    </div>
+        <a href="./delete-confirm">Delete</a>
+    </div>
+</body>
+</html>
