@@ -3,38 +3,36 @@ from django.http import HttpResponse
 import datetime
 
 conferences = [
-        {
-            "id": 1,
-            "name": "Introduction to AI",
-            "date": "2023-03-12",
-            "location": "BK Arena"
-        },
-        {
-            "id": 2,
-            "name": "Data Science in health",
-            "date": "2023-12-12",
-            "location": "Intare Conference Arena"
-        },
-        {
-            "id": 3,
-            "name": "Impact of AI on employment",
-            "date": "2023-04-02",
-            "location": "Hotel Umubano"
-        },
-
-        {
-            "id": 4,
-            "name": "Developing Tech Hubs in Africa",
-            "date": "2024-01-01",
-            "location": "Intare Conference Arena"
-        },
-
-        {
-            "id": 5,
-            "name": "FIFA Summit 2024",
-            "date": "2024-07-01",
-            "location": "BK Arena"
-        },
+{
+  "id": 1,
+  "name": "Introduction to Tech In Farming",
+  "date": "2023-03-12",
+  "location": "Eiffel Tower Conference Center"
+},
+{
+  "id": 2,
+  "name": "Data Science in Healthcare",
+  "date": "2023-12-12",
+  "location": "Louvre Museum Auditorium"
+},
+{
+  "id": 3,
+  "name": "Impact of Technology on Employment",
+  "date": "2023-04-02",
+  "location": "Champs-Élysées Convention Hall"
+},
+{
+  "id": 4,
+  "name": "Developing Tech Ecosystem in France",
+  "date": "2024-01-01",
+  "location": "La Défense Technology Park"
+},
+{
+  "id": 5,
+  "name": "Paris Tech Summit 2024",
+  "date": "2024-07-01",
+  "location": "Palais des Congrès"
+}
     ]
 def conferences_view(request):
     return render(request, 'conference/conferences.html', context={"conferences": conferences})
