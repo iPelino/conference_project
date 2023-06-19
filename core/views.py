@@ -18,3 +18,38 @@ def testing_stuff(request, number):
     # if id < 5:
     #     number = 'xzy'
     return render(request, 'testing.html', {'number': number})
+
+def conference_list(request):
+    data=[
+    {
+        "id": 0,
+        'name': 'Conference 1',
+        'dates': '2023-07-10 to 2023-07-12',
+        'location': 'Location 1'
+    },
+    {
+        "id": 1,
+        'name': 'Conference 2',
+        'dates': '2023-08-15 to 2023-08-17',
+        'location': 'Location 2'
+    },
+    {
+        "id": 2,
+        'name': 'Conference 3',
+        'dates': '2023-09-20 to 2023-09-22',
+        'location': 'Location 3'
+    },
+    {
+        "id": 3,
+        'name': 'Conference 4',
+        'dates': '2023-10-05 to 2023-10-07',
+        'location': 'Location 4'
+    },
+    {
+        "id": 4,
+        'name': 'Conference E',
+        'dates': '2023-11-12 to 2023-11-14',
+        'location': 'Location E'
+    }
+]
+    return render(request,'conference_view.html',{"data":data})

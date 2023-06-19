@@ -2,6 +2,7 @@ from django.urls import path, re_path
 from core import views
 urlpatterns = [
     # www.conference.rw
+    path('conferences/', views.conference_list, name='conference'),
     path('', views.home_view, name='home'),
     path('<str:number>/', views.testing_stuff, name='testing'),
     # path('<pk:id>/', views.testing_stuff, name='testing'),
