@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete</title>
+</head>
+<body>
+     <h1>{{ conference.name }}</h1>
+<p>{{ conference.date }}</p>
+<p>{{ conference.location }}</p>
+
+<form method="post" action="{% url 'list_of_conference'%}">
+  {% csrf_token %}
+  <p>Are you sure you want to delete this conference</p>
+  <button type="submit">Delete</button>
+</form>
+</body>
+</html>

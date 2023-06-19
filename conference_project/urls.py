@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
 
-    path('', include('core.urls'))
+    path('', include('core.urls')),
+    path('speakers/', include('speakers.urls')),
+    path('conference/', include('conference.urls')),
 
 ]

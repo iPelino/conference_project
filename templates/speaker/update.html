@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update</title>
+</head>
+<body>
+     <h1>Update Speaker</h1>
+    <form method="POST">
+  {% csrf_token %}
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" value="{{ speaker.name }}"><br>
+
+  <label for="bio">Bio:</label>
+  <textarea id="bio" name="bio">{{ speaker.bio }}</textarea><br>
+
+  <label for="other_info">Other Info:</label>
+  <input type="text" id="other_info" name="other_info" value="{{ speaker.other_info }}"><br>
+
+  <button type="submit">Update Speaker</button>
+</form>
+</body>
+</html>
+
+
+

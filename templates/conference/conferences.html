@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conferences</title>
+</head>
+<body>
+     <h1>conferences List</h1>
+
+    <ul>
+    {% for key,conference in conferences.items %}
+        <li>
+           <a href="{% url 'conference_detail' key %}"> <h3>{{ conference.name }}</h3></a>
+            <p>{{ conference.date }}</p>
+            <p>{{ conference.location }}</p>
+        </li>
+       <p> <a href="{% url 'conference_delete' key %}">Delete</a>   <a href="{% url 'conference_update' key %}">update.</a></p>
+    {% endfor %}
+    </ul>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <span class="step-links">
+            {% if speakers.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ speakers.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current-page">{{ speakers.number }}</span>
+
+            {% if speakers.has_next %}
+                <a href="?page={{ speakers.next_page_number }}">next</a>
+                <a href="?page={{ speakers.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+</body>
+</html>
