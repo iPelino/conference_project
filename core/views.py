@@ -126,6 +126,45 @@ def update_conference(request,conference_id):
             selectedData = item
     return render(request, "update.html",{"data":selectedData})
 
+
+def delete_conference(request,conference_id):
+    data=[
+    {
+        "id": 0,
+        'name': 'Conference A',
+        'dates': '2023-07-10 to 2023-07-12',
+        'location': 'Location A'
+    },
+    {
+        "id": 1,
+        'name': 'Conference B',
+        'dates': '2023-08-15 to 2023-08-17',
+        'location': 'Location B'
+    },
+    {
+        "id": 2,
+        'name': 'Conference C',
+        'dates': '2023-09-20 to 2023-09-22',
+        'location': 'Location C'
+    },
+    {
+        "id": 3,
+        'name': 'Conference D',
+        'dates': '2023-10-05 to 2023-10-07',
+        'location': 'Location D'
+    },
+    {
+        "id": 4,
+        'name': 'Conference E',
+        'dates': '2023-11-12 to 2023-11-14',
+        'location': 'Location E'
+    }
+]
+    for item in data:
+        if (item["id"] == conference_id):
+            selectedData = item
+    return render(request, 'delete.html',{"data":selectedData})
+
 def testing_stuff(request, number):
     # DB query
     #
