@@ -11,10 +11,10 @@ def about_view(request):
     return HttpResponse("<h1>About Page</h1><br><a href='/'>Go back to home</a>")
 
 
-def testing_stuff(request, number):
+def testing_stuff(request):
     # DB query
     #
     # number = ''
     # if id < 5:
     #     number = 'xzy'
-    return render(request, 'testing.html', {'number': number})
+    return render(request, 'testing.html')

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new conference</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .create{
+            margin: 50px auto;
+            max-width: 500px;
+            border: 1px solid green;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            font-weight: 800;
+            font-size: 20px;
+            
+        }
+        .create >* {
+            width: 90%;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        .create> div{
+            width: 200px;           
+        }
+        .create> div >button{
+            font: inherit;
+            border-radius: 10px;
+        }
+        .create> div >button > a{
+            text-decoration: none;
+            color: black;
+        }
+        .create> div >#button1{
+            background-color: orangered;   
+        }
+        .create> div >#button2{
+            background-color: green;
+        }
+            
+    </style>
+</head>
+<body>
+    <form class="create">
+        <h2><u>CREATE NEW CONFERENCE</u></h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter conference name" required>
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        <label for="topic">Topic:</label>
+        <input type="text" id="topic" placeholder="Enter the conference topic" required>
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Enter location to take place" required>
+        <div>
+            <button id="button1"><a href="conferences.html">Cancel</a></button>
+            <button id="button2" onclick="alert('A New Conference Created Successfully!')">Save</a></button>
+        </div>
+        
+    </form>
+</body>
+</html>
