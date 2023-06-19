@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Conference</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        form {
+            width: 400px;
+        }
+        label {
+            display: block;
+        }
+        input {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            height: 30px;
+        }
+        button {
+            width: 102%;
+            height: 30px;
+        }
+    </style>
+    <div style="padding: 5% 30%; ">
+        <form action="" styles="width: 200px; padding: 15px;">
+            <h2>Enter New Conference information</h2>
+            <label for="" >
+                Name<BR>
+                <input type="text" value="{{conference.name}}">
+            </label>
+            <label for="" >
+                Date<BR>
+                <input type="date" value="{{conference.date}}" ><BR>
+            </label>
+            <label for="" >
+                Location<BR>
+                <input type="text" value="{{conference.location}}"><BR>
+            </label>
+            <button >Update</button>
+        </form>
+    </div>
+</body>
+</html>
