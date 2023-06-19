@@ -5,11 +5,5 @@ urlpatterns = [
     path('', views.render_conference_list, name='home'),
     path('create/', views.create_conference, name='scheduler'),
     path('<int:conference_id>/', views.render_conference, name="conference details"),
+    path('<int:conference_id>/update/', views.update_conference, name="conference update")
 ]
-
-    # path('<str:number>/', views.testing_stuff, name='testing'),
-    # path('about/', views.about_view, name='about'),
-    # path('<pk:id>/', views.testing_stuff, name='testing'),
-    # path('<slug:slug>/', views.testing_stuff, name='testing'),
-
-    # www.conference.rw/about/

@@ -61,6 +61,14 @@ def render_conference(request, conference_id: int):
     return render(request, 'error.html', {"error": "Conference not found"}) 
     
 
+def update_conference(request, conference_id: int):
+    """
+    update a specific conference's details
+    """
+    for conference in conferences:
+        if conference.get('id') == conference_id:
+            return render(request, 'update_conference.html', {"conference": conference})
+    return render(request, 'error.html', {"error": "Conference not found"}) 
 
 
 

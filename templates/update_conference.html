@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New</title>
+    <title>Update</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -64,19 +64,19 @@
     <form action="" method="post">
         <div class="input">
             <span>Conference name</span>
-            <input type="text" name="conference_name" id="">
+            <input type="text" name="conference_name" value="{{conference.name}}" id="">
         </div>
         <div class="input">
             <span>Location</span>
-            <input type="text" name="location_name" id="">
+            <input type="text" name="location_name" value="{{conference.location}}" id="">
         </div>
         <div class="input">
             <span>Start Date</span>
-            <input type="date" name="start_date" id="">
+            <input type="date" name="start_date" value="{{conference.start}}" id="">
         </div>
         <div class="input">
             <span>End Date</span>
-            <input type="date" name="end_date" id="">
+            <input type="date" name="end_date" value="{{conference.end}}" id="">
         </div>
         <div>
             <button type="submit">Schedule</button>
