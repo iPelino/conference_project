@@ -11,7 +11,7 @@ conferences = [
             "id": 2,
             "name": "health",
             "date": "2023-5-17",
-            "location": "blabla"
+            "location": "blablaq"
         },
         {
             "id": 3,
