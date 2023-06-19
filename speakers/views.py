@@ -3,7 +3,7 @@ from django.shortcuts import render
 speakers = [
         {
             "id": 1,
-            "name": "Eric Ndungutse",
+            "name": "Oscar Uwayezu",
             "birthdate": "1996-03-12",
             "country": "Rwanda",
             "email":"eric@example.com",
@@ -61,3 +61,13 @@ def update_speaker_view(request,id):
         if spek["id"] == int(id):
             speaker = spek
     return render(request, "speakers/updateSpeaker.html", context={"speaker": speaker})
+
+def delete_speaker_view(request,id):
+    speaker = None
+    for spek in speakers:
+        if spek["id"] == int(id):
+            speaker = spek
+    return render(request, "speakers/delete_speaker.html", context={"speaker" : speaker})
+
+def confirm_delete_view(request, id):
+    return render(request, "speakers/confirm_delete.html")
