@@ -1,18 +1,15 @@
 <!-- conference_list.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Conference List</title>
-</head>
-<body>
-    <h1>Conference List</h1>
-    <ul>
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Conference List</h1>
+ <ul>
         {% for conference in conferences %}
             <li>
-                <h2>{{ conference.name }}</h2>
+                <h2><a href="{% url 'conference_detail' conference.id %}">{{ conference.name|capfirst }} </a></h2>
                 
             </li>
         {% endfor %}
-    </ul>
-</body>
+ </ul>
+ {% endblock content %}
 </html>

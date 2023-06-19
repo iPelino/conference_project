@@ -1,6 +1,5 @@
 # views.py
-from django.shortcuts import render
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import ConferenceForm
 from .models import Conference
 
@@ -22,3 +21,22 @@ def create_conference(request):
     else:
         form = ConferenceForm()
     return render(request, 'conference/create_conference.html', {'form': form})
+
+def delete_conference(request, pk):
+    conference = get_object_or_404(Conference, pk=pk)
+    if request.method == 'POST':
+        conference.delete()
+        return redirect('conference_list')
+    return render(request, 'conference/delete_conference.html', {'conference': conference})
+
+
+def edit_conference(request, pk):
+    conference = get_object_or_404(Conference, pk=pk)
+    if request.method == 'POST':
+        form = ConferenceForm(request.POST, instance=conference)
+        if form.is_valid():
+            form.save()
+            return redirect('conference_detail', pk=conference.pk)
+    else:
+        form = ConferenceForm(instance=conference)
+    return render(request, 'conference/edit_conference.html', {'form': form, 'conference': conference})
