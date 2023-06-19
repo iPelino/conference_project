@@ -1,0 +1,7 @@
+<h2>Confirm Deletion</h2>
+<h3>{{ conference.name }}</h3>
+<form action="{% url 'conference_list' %}" method="DELETE">
+  {% csrf_token %}
+  <p>Are you sure you want to delete this conference?</p>
+  <button type="submit">Delete</button>
+</form>

@@ -1,0 +1,11 @@
+{% for conference in conferences %}
+<h2>{{ conference.name }}</h2>
+<p>Dates: {{ conference.dates }}</p>
+<p>Location: {{ conference.location }}</p>
+<p>Topics: {{ conference.topics }}</p>
+<a href="{% url 'conference_detail' conference_id=conference.id %}"
+  >View Details</a
+>
+{% empty %}
+<p>there is no available conferences.</p>
+{% endfor %}

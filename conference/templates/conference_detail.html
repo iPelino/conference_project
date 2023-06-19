@@ -1,0 +1,12 @@
+<h2>{{ conference.name }}</h2>
+<p>Dates: {{ conference.dates }}</p>
+<p>Location: {{ conference.location }}</p>
+<p>Topics: {{ conference.topics }}</p>
+<a href="{% url 'conference_update' conference_id=conference.id %}">Edit</a>
+<form
+  action="{% url 'conference_delete' conference_id=conference.id %}"
+  method="GET"
+>
+  {% csrf_token %}
+  <button type="submit">Delete</button>
+</form>
