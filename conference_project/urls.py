@@ -21,7 +21,7 @@ from core import views
 urlpatterns = [
     # www.conference.rw/admin/
     path('admin/', admin.site.urls),
-
+    path('conferences/', include('core.urls')),
 
     path('', include('core.urls'))
 
