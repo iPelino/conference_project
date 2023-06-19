@@ -8,19 +8,19 @@ def conference_list(request):
         {'name': 'Conference 4', 'dates': 'September 15-17, 2023', 'location': 'City D'},
         {'name': 'Conference 5', 'dates': 'October 20-22, 2023', 'location': 'City E'},
     ]
-    return render(request, 'conference/conference_list.html', {'conferences': conferences})
+    return render(request, 'conference_list.html', {'conferences': conferences})
 
 def conference_create(request):
-    return render(request, 'conference/conference_create.html')
+    return render(request, 'conference_create.html')
 
 def conference_details(request, conference_id):
     conference = {'name': 'Conference', 'dates': 'June 1-3, 2023', 'location': 'City A', 'topics': 'Topic 1, Topic 2'}
-    return render(request, 'conference/conference_details.html', {'conference': conference})
+    return render(request, 'conference_details.html', {'conference': conference})
 
 def conference_update(request, conference_id):
     conference = {'name': 'Conference', 'dates': 'June 1-3, 2023', 'location': 'City A', 'topics': 'Topic 1, Topic 2'}
-    return render(request, 'conference/conference_update.html', {'conference': conference})
+    return render(request, 'conference_update.html', {'conference': conference})
 
 def conference_delete(request, conference_id):
     conference = {'name': 'Conference', 'dates': 'June 1-3, 2023', 'location': 'City A', 'topics': 'Topic 1, Topic 2'}
-    return render(request, 'conference/conference_delete.html', {'conference': conference})
+    return render(request, 'conference_delete.html', {'conference': conference})
