@@ -28,3 +28,6 @@ def speakers(request):
     speakers=[speaker1,speaker2]
 
     return render(request, 'speakers.html',{"speakers":speakers})
+
+def create(request):
+    return render(request, 'createspeaker.html')
