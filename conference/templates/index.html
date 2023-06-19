@@ -81,7 +81,7 @@
         font-size: 1.5rem;
     }
 
-    .conference_navigation {
+    .conference_navigation, .create_conference {
         padding: 1rem;
         text-transform: none;
         text-decoration: none;
@@ -93,7 +93,7 @@
         border-radius: .5rem;
     }
 
-    .conference_navigation:hover {
+    .conference_navigation:hover, .create_conference:hover {
         background-color: rgba(0, 0, 0, 1);
         transform: scale(1.02);
     }
@@ -111,10 +111,13 @@
             <p>Date: {{conference.date}}</p>
             <p>Venue: {{conference.city}}</p>
             <p>Attendance: {{conference.attendees}}</p>
-            <a href="./conference/{{conference.id}}" class="conference_navigation">Learn more</a>
+            <a href="./{{conference.id}}" class="conference_navigation">Learn more</a>
         </li>
         {%endfor%}
     </ul>
+    <div class="create_conference">
+        <a href="./create" class="create_conference">Create a new conference</a>
+    </div>
 </body>
 
 </html>

@@ -82,6 +82,10 @@
     .conference_details_update a:hover {
         transform: scale(1.02);
     }
+
+    #conference_delete {
+        background-color: rgb(255, 0, 0, 0.7)
+    }
 </style>
 
 <body>
@@ -94,8 +98,8 @@
     <div class="conference_details_update">
         <p>The details above are provided by our community. You may also update or delete an event from below.</p>
         <span>
-            <a href="{{conference.id}}/update">Update</a>
-            <a href="{{conference.id}}/delete">Delete</a>
+            <a id="conference_update" href="./update">Update</a>
+            <a id="conference_delete" href="./delete">Delete</a>
         </span>
     </div>
 </body>

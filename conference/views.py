@@ -50,3 +50,6 @@ def home(request):
 def update_page(request, conference_id: int):
     conference = list(filter(lambda c: c['id'] == conference_id, conferences))[0]
     return render(request, 'conference_update.html', {'conference': conference})
+
+def create_page(request):
+    return render(request, 'conference_create.html')
