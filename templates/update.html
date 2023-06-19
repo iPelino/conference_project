@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conference Details</title>
+</head>
+<body>
+  <h1>Conference Details</h1>
+
+  <form id="conferenceForm">
+    <label for="conferenceName">Conference Name:</label>
+    <input type="text" id="conferenceName" name="conferenceName" required>
+
+    <label for="conferenceDate">Date:</label>
+    <input type="date" id="conferenceDate" name="conferenceDate" required>
+
+    <label for="conferenceLocation">Location:</label>
+    <input type="text" id="conferenceLocation" name="conferenceLocation" required>
+
+    <input type="submit" value="Update Conference">
+  </form>
+
+  <script>
+    // JavaScript code to handle form submission
+    document.getElementById("conferenceForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form from submitting
+
+      // Retrieve input values
+      var conferenceName = document.getElementById("conferenceName").value;
+      var conferenceDate = document.getElementById("conferenceDate").value;
+      var conferenceLocation = document.getElementById("conferenceLocation").value;
+      
+      // Update conference details
+      document.getElementById("conferenceName").textContent = conferenceName;
+      document.getElementById("conferenceDate").textContent = conferenceDate;
+      document.getElementById("conferenceLocation").textContent = conferenceLocation;
+      
+      // Reset the form inputs
+      document.getElementById("conferenceForm").reset();
+    });
+  </script>
+</body>
+</html>
