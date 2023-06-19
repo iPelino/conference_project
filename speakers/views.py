@@ -18,6 +18,8 @@ def update_speaker(request, speaker_id):
     speaker = {"id": speaker_id, "name": "Speaker", "bio": "Bio", "contact": "Contact"}
     return render(request, "speakers/update_speaker.html", {"speaker": speaker})
 
-# def delete_speaker(request, speaker_id):
+def delete_speaker(request, speaker_id):
 
-#     return render(request, 'speakers/speaker_delete.html')
+    return render(request, 'speakers/speaker_delete.html')
+def create_speaker(request):
+    return render(request, ' speakers/create_speaker.html')
