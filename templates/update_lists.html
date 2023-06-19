@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for key,value in lists.items %}
+    {% if key == id %}
+    <form>
+    <h1><u>UPDATE NEW CONFERENCE</u></h1>
+    <label>Conference id</label>
+    <input type="text" width="100" value="{{key}}"><br>
+    <label>Conference name</label>
+    <input type="text" width="100"value="{{value.co_name}}"><br>
+    <label>Date</label>
+    <input type="text" value="{{value.co_date}}"><br>
+    <label >Location</label>
+    <input type="text" width="100"value="{{value.co_location}}"><br>
+    <label>Topic</label>
+    <input type="text" width="100"><br>
+    <input type="submit" value="UPDATE"><input type="reset" value="RESET">
+
+    </form>
+    {% endif %}
+    {% endfor %}
+</body>
+</html>
