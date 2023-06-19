@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from django.views import Conference
 
 def home_view(request):
     data = [
@@ -44,3 +44,9 @@ def testing_stuff(request, number):
     # if id < 5:
     #     number = 'xzy'
     return render(request, 'testing.html', {'number': number})
+def list(request):
+    conferences = Conference.objects.all()
+    return render(request, 'conference/list.html', {'conferences': conferences})
+
+def create(request):
+    return render(request, 'conference/create.html')
