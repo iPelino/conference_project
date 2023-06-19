@@ -53,3 +53,6 @@ def conference_list(request):
     }
 ]
     return render(request,'conference_view.html',{"data":data})
+
+def conference(request):
+    return render(request, 'create_conference.html')
