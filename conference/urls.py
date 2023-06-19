@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="conferences"),
-    path("create/", views.create)
+    path("create/", views.create),
+    path('<int:id>/', views.single_conference),
 ]

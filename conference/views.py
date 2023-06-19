@@ -43,3 +43,8 @@ def create(request):
     return render (request, "create_conference.html")
 
 
+def single_conference (request, id: int): 
+    conference = list(filter(lambda c: c['id'] == id, conferences))[0]
+    return render (request, "single_conference.html", { "conference": conference })
+
+
