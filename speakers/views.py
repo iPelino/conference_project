@@ -12,4 +12,8 @@ def speaker_list(request):
     return render(request, "speakers/speaker_list.html", {"speakers": speakers})
 
 
+def create_speaker(request):
+    return render(request, 'speakers/create_speaker.html')
+
+
 
