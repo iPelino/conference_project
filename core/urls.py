@@ -9,4 +9,6 @@ urlpatterns = [
 
     # www.conference.rw/about/
     path('about/', views.about_view, name='about'),
+
+    path('conferences/', views.all_conferences, name='conference list'),
 ]
