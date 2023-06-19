@@ -19,4 +19,6 @@ urlpatterns = [
 
     path('conferences/',views.Conferences,name='conference'),
 
+    path('conferences/create/',views.new_conference,name='create'),
+
 ]

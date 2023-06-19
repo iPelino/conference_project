@@ -55,3 +55,7 @@ def testing_stuff(request, number):
     }
 ]
     return render(request,'conference.html',{"data":data})
+
+    
+def new_conference(request):
+    return render(request, 'create.html')
