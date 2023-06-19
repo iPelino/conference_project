@@ -11,8 +11,28 @@
     <h1>Home Page</h1>
     <br>
     <a href="{% url 'about' %}">About us</a>
-    <a href="{% url 'view_conference' %}">View Conference</a>
+    
     <hr>
+    <table border="2" cellpadding="1" cellspacing="1">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Location</th>
+        {% for k,v in conf.items %}
+        <tr>
+            {% if k == id1 %}
+
+                <td>{{ k }}</td>
+
+                {% for x,y in v.items %}
+                        <td>{{ y }}</td>
+
+                {% endfor %}
+        </tr>
+    
+        {% endif %}
+        {% endfor %}
+    </table>
     <h2>{{ data }}</h2>
     {% for y in data %}
         {% if y == 'django' %}

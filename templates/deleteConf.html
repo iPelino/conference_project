@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Conference</title>
+</head>
+<body>
+  <h2>Delete Conference</h2>
+  {% for k,v in conf.items %}
+  <tr>
+      {% if k == id1 %}
+
+            <script>alert('Are you sure you want to delete conference \n {{k}}.{{v.cname}} {{v.date}} {{v.location}} ?')</script>
+            <form>
+              <label for="id">ID:</label>
+              <input type="text" id="id" name="id" value="{{ k }}"><br><br>
+  
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" value="{{v.cname}}"><br><br>
+                  <label for="date">Date:</label>
+                  <input type="text" id="date" name="date" value="{{v.date}}"><br><br>
+                  
+                  <label for="location">Location:</label>
+                  <input type="text" id="location" name="location" value="{{v.location}}" ><br><br>
+              
+                  
+                  <input type="submit" value="Delete">
+                </form>
+  </tr>
+
+  {% endif %}
+  {% endfor %}
+
+</body>
+</html>
