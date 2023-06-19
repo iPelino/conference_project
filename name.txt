@@ -1,3 +1,5 @@
-NAME: IRADUKUNDA Aline
-REG: 221018616
-DEPARTMENT: Computer science
+name:IRADUKUNDA aline
+
+regNo: 221018616
+
+Department: Computer Science
