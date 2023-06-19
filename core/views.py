@@ -3,7 +3,33 @@ from django.shortcuts import render
 
 
 def home_view(request):
-    data = ['django', 'laravel', 'asp.net core', 'express']
+    data = [
+        {
+            'name': 'Conference 1',
+            'dates': 'October 1-3, 2023',
+            'location': 'Rusizi',
+        },
+        {
+            'name': 'Conference 2',
+            'dates': 'November 5-7, 2023',
+            'location': 'Gasabo',
+        },
+        {
+            'name': 'Conference 3',
+            'dates': 'December 10-12, 2023',
+            'location': 'Kirehe',
+        },
+        {
+            'name': 'Conference 4',
+            'dates': 'January 15-17, 2024',
+            'location': 'Gisozi',
+        },
+        {
+            'name': 'Conference 5',
+            'dates': 'February 20-22, 2024',
+            'location': 'Kabuga',
+        },
+    ]
     return render(request, 'home.html', {'data': data})
 
 
