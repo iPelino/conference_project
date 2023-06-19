@@ -1,0 +1,7 @@
+<!-- conference_delete.html -->
+<h1>Delete Conference</h1>
+<p>Are you sure you want to delete the conference: {{ object.name }}?</p>
+<form method="POST">
+  {% csrf_token %}
+  <button type="submit">Delete</button>
+</form>
