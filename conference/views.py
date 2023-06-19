@@ -40,8 +40,9 @@ conferences = [
     }
 ]
 
-def conference_list(request):
-    return render(request, 'conference_list.html', {'conferences': conferences})
+def conference_details(request, conference_id: int):
+    conference = list(filter(lambda c: c['id'] == conference_id, conferences))[0]
+    return render(request, 'conference_details.html', {'conference': conference})
 
 def home(request):
-    return render(request, 'index.html', {'conferences': conferences, 'name': 'Django'})
+    return render(request, 'index.html', {'conferences': conferences})
