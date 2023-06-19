@@ -7,9 +7,10 @@
 </head>
 <body>
     <h1>Our speakers</h1>
-    <h2>{{speakers}}</h2>
-    {% for a in speakers %}
-    <h2>{{ a }}</h2>
+    {% for speaker in speakers %}
+    <h2>{{speakers.name}}</h2>
+    <p>{{speaker.bio}}</p>
+    <p>contact: {{ speakers.contact }}</p>
     {% endfor %}
 </body>
 </html>

@@ -1,11 +1,12 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
-def view_speakers (request):
-    speakers = {'johovanis' : 24,
-                'Benine': 24,
-                'kendra': 30,
-                'Doreen': 22,
-                'Angel': 29,
-                }
-    return render(request,'speaker.html', {'speakers' : speakers})
+def speakers(request):
+    speakers = [
+        {'name': 'Jeho', 'bio' : 'IT support', 'contact': '0783243222'},
+        {'name': 'Nad', 'bio' : 'IT support', 'contact': '0783243222'},
+        {'name': 'John', 'bio' : 'IT support', 'contact': '0783243222'},
+        {'name': 'Jenny', 'bio' : 'IT support', 'contact': '0783243222'},
+        {'name': 'Jack', 'bio' : 'IT support', 'contact': '0783243222'},
+    ]
+    return render(request, 'templates/speaker.html', {'speakers': speakers})
