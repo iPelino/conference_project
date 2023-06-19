@@ -8,20 +8,20 @@
 </head>
 <body>
     <h1>speakers</h1><hr/>
-    <table>
+    <table style="border: 1px solid black; width: 100%;">
         <tr>
-           <th>number</th>
-           <th>speaker_name</th>
-           <th>speaker_bio</th>
-           <th>speakers_constact</th>
+           <th style="padding: 8px; border: 1px solid black;">number</th>
+           <th style="padding: 8px; border: 1px solid black;">speaker_name</th>
+           <th style="padding: 8px; border: 1px solid black;">speaker_bio</th>
+           <th style="padding: 8px; border: 1px solid black;">speakers_constact</th>
         </tr>
 
         {% for conf in speakers %}
     <tr>
-        <td>{{conf.id}}</td>
-        <td>{{conf.name}}</td>
-        <td>{{conf.bio}}</td>
-        <td>{{conf.contact}}<td>
+        <td style="padding: 8px; border: 1px solid black;">{{conf.id}}</td>
+        <td style="padding: 8px; border: 1px solid black;">{{conf.name}}</td>
+        <td style="padding: 8px; border: 1px solid black;">{{conf.bio}}</td>
+        <td style="padding: 8px; border: 1px solid black;">{{conf.contact}}<td>
     </tr>
    
     {% endfor %}
