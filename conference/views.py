@@ -61,3 +61,5 @@ def delete_conference(request,id):
             conference = conf
     return render(request, "delete_conference.html", context={"conference" : conference})
 
+def confirm_delete_view(request, id):
+    return render(request, "comfirm_message.html")

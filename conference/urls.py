@@ -7,5 +7,6 @@ urlpatterns = [
       path('conferences/<id>/', views.conference_view),
        path('conferences/<id>/update/', views.update_conference),
         path('conferences/<id>/delete/', views.delete_conference),
-   
+       path('conferences/<id>/delete-confirm', views.confirm_delete_view)
+
 ]
