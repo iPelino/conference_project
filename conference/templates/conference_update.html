@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update {{conference.name}}</title>
+</head>
+<style>
+    * {
+        font-size: 62.5%;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: auto;
+        min-height: 90vh;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 5rem 0;
+        gap: 4rem;
+    }
+
+    .conference_update_container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conference_update_form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+        max-width: 50rem;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        padding: 4rem;
+    }
+
+    .input_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .input_container label {
+        font-size: 1.5rem;
+    }
+
+    .input_container input {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        border: none;
+        outline: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: .5rem;
+    }
+
+    .conference_update {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: .5rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+    }
+
+    .conference_update:hover {
+        transform: scale(1.02);
+    }
+
+    .conference_update_heading {
+        font-size: 5rem;
+        padding: 2rem 0;
+        text-align: center;
+        background-image: linear-gradient(to right, #4370EB, black, #4370EB);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
+<body>
+    <div class="conference_update_container">
+        <h1 class="conference_update_heading">
+            Update {{conference.name}}
+        </h1>
+        <form class="conference_update_form">
+            <div class="input_container">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="{{conference.name}}">
+            </div>
+            <div class="input_container">
+                <label for="date">Date</label>
+                <input type="date" name="description" id="description" value="{{conference.date}}">
+            </div>
+            <div class="input_container">
+                <label for="Venue">Venue</label>
+                <input type="text" name="venue" id="venue" value="{{conference.city}}">
+            </div>
+            <div class="input_container">
+                <label for="participants">Participants</label>
+                <input type="text" name="participants" id="participants" value="{{conference.attendees}}">
+            </div>
+            <div class="input_container">
+                <input type="submit" value="Update" class="conference_update">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
