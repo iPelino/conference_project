@@ -10,3 +10,13 @@ urlpatterns = [
     # www.conference.rw/about/
     path('about/', views.about_view, name='about'),
 ]
+
+
+from django.urls import path, re_path
+from core import views
+urlpatterns = [
+
+
+    path('conferences/',views.Conferences,name='conference'),
+
+]
