@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      body {
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      .speaker {
+        width: 30%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .speaker p:first-child {
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .bio {
+        width: 50%;
+        margin: auto;
+      }
+    </style>
+    <title>Speaker | {{ speaker.name }}</title>
+  </head>
+  <body>
+    <h1>{{ speaker.name }}</h1>
+    <hr />
+
+    <div class="speaker">
+      <p>Country</p>
+      <p>{{ speaker.country }}</p>
+    </div>
+
+    <div class="speaker">
+      <p>Email</p>
+      <p>{{ speaker.email }}</p>
+    </div>
+
+    <div class="speaker">
+      <p>Birthdate</p>
+      <p>{{ speaker.birthdate }}</p>
+    </div>
+
+    <div class="bio">
+      <h2>Bio</h2>
+      <p>{{ speaker.bio }}</p>
+    </div>
+  </body>
+</html>
