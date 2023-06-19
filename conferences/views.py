@@ -36,5 +36,13 @@ conferences = [
     ]
 def conferences_available(request):
     return render(request, 'myconferences.html', context={"conferences": conferences})
+
 def new_conference(request):
     return render(request, "conference_creation.html")
+
+def conference_view(request,id):
+    conference = None
+    for conf in conferences:
+        if conf["id"] == int(id):
+            conference = conf
+    return render(request, "detailsconf.html", context={"conference": conference })
