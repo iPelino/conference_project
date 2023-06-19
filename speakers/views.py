@@ -55,3 +55,9 @@ def speaker_view(request,id):
         if spek["id"] == int(id):
             speaker = spek
     return render(request, "speakers/speaker.html", context={"speaker": speaker })
+def update_speaker_view(request,id):
+    speaker = None
+    for spek in speakers:
+        if spek["id"] == int(id):
+            speaker = spek
+    return render(request, "speakers/updateSpeaker.html", context={"speaker": speaker})
