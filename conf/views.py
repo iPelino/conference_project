@@ -6,8 +6,29 @@ from .models import Speaker
 # Create your views here.
 
 
+speakers=[
+        {
+            "id":1,
+            "name":"oliviertech",
+            "bio":"web developer",
+            "contact":"tech@gmail"
+        }
+        ,
+        {
+            "id":2,
+            "name":"oliviertech",
+            "bio":"web developer",
+            "contact":"tech@gmail"
+        },
+        {
+            "id":3,
+            "name":"oliviertech",
+            "bio":"web developer",
+            "contact":"tech@gmail"
+        }
+]
 
-def speakers(request):
+def speakers_view(request):
     speaker1=Speaker()
     speaker1.id=1
     speaker1.name="oliviertech"
@@ -25,9 +46,19 @@ def speakers(request):
     
 
 
-    speakers=[speaker1,speaker2]
 
     return render(request, 'speakers.html',{"speakers":speakers})
 
 def create(request):
     return render(request, 'createspeaker.html')
+
+
+
+def speaker(request,id):
+    sp = None
+    print(speakers)
+    for speak in speakers:
+        if speak["id"] == int(id):
+        # if speak.id == int(id):
+            sp = speak
+    return render(request, 'speaker.html',{"speaker":sp})
