@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Homepage</h1>
+    <h2>List Of All Conferences</h2>
+    <table border="3" cellpadding="2" cellspacing="2">
+        <th>Id</th><th>conference name</th><th>Date</th><th>Location</th>
+            {%  for key,values in conference.items %}
+            <tr>
+                    {% if key == id %}
+                    <td>{{ key }}</td>
+                    <td>{{ values.name }}</td>
+                    <td>{{ values.date }}</td>
+                    <td>{{ values.location}}</td>
+            {% endif %}
+        {% endfor %}
+            
+        </tr>
+    </table>
+            
+</body>
+</html>
