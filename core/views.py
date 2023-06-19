@@ -22,7 +22,13 @@ def testing_stuff(request, number):
 
 
 def all_conferences(request):
-    conferences = Conference.objects.all()
+    conferences = [
+        {'name': 'Conference May', 'dates': '2023-05-23', 'location': 'City A', 'topic': 'Project A'},
+        {'name': 'Conference June', 'dates': '2023-06-26', 'location': 'City B', 'topic': 'Project B'},
+        {'name': 'Conference July', 'dates': '2023-07-20', 'location': 'City C', 'topic': 'Project C'},
+        {'name': 'Conference August', 'dates': '2023-08-09', 'location': 'City D', 'topic': 'Project D'},
+        {'name': 'Conference November', 'dates': '2023-11-12', 'location': 'City E', 'topic': 'Project E'},
+    ]
     return render(request, 'conference/conferences.html', {'conferences': conferences})
 
 def new_conference(request):
