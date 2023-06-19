@@ -12,4 +12,10 @@ urlpatterns = [
     
     # www.conference.rw/references/create/
     path('conferences/create/', views.create_view, name='create'),
+
+    path('conferences/<int:id>/', views.viewParticular, name='create'),
+    path('conferences/<int:id>/update', views.update, name='create'),
+    
+    path('conferences/<int:id>/delete', views.delete, name='create'),
+
 ]
