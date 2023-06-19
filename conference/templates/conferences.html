@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Manager</title>
+</head>
+<style>
+    * {
+        font-size: 62.5%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        height: auto;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        padding: 5rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .home_heading {
+        font-size: 3rem;
+        text-align: center;
+        padding: 1rem 2rem;
+    }
+
+    .home_navigation {
+        padding: 1rem 2rem;
+        background-color: gray;
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border-radius: .5rem;
+    }
+
+    .home_navigation:hover {
+        background-color: black;
+        transform: scale(1.02);
+    }
+
+    .conference_list_container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+    }
+
+    .conference_box {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        max-width: 30rem;
+        gap: 2rem;
+        border: none;
+        padding: 2rem;
+        border-radius: .5rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+    }
+
+    .conference_box h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    .conference_box p {
+        font-size: 1.5rem;
+    }
+
+    .conference_navigation, .create_conference {
+        padding: 1rem;
+        text-transform: none;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, .9);;
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border-radius: .5rem;
+    }
+
+    .conference_navigation:hover, .create_conference:hover {
+        background-color: rgba(0, 0, 0, 1);
+        transform: scale(1.02);
+    }
+
+</style>
+
+<body>
+    <h1 class="home_heading">
+        Welcome to our conference manager! Below is a list of upcoming conferences.
+    </h1>
+    <ul class="conference_list_container">
+        {% for conference in conferences%}
+        <li class="conference_box">
+            <h2>{{conference.name}}</h2>
+            <p>Date: {{conference.date}}</p>
+            <p>Venue: {{conference.city}}</p>
+            <p>Attendance: {{conference.attendees}}</p>
+            <a href="./{{conference.id}}" class="conference_navigation">Learn more</a>
+        </li>
+        {%endfor%}
+    </ul>
+    <div class="create_conference">
+        <a href="./create" class="create_conference">Create a new conference</a>
+    </div>
+</body>
+
+</html>
