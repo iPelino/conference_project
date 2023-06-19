@@ -1,5 +1,0 @@
-name: Dusingizimana Evariste
-
-regNo: 221005833
-
-Department: Computer Science
