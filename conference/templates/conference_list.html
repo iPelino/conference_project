@@ -1,0 +1,8 @@
+{% for conference in conferences %}
+    <h2>{{ conference.name }}</h2>
+    <p>Dates: {{ conference.dates }}</p>
+    <p>Location: {{ conference.location }}</p>
+    <hr>
+{% empty %}
+    <p>No conferences available.</p>
+{% endfor %}
