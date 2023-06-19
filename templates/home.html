@@ -10,18 +10,20 @@
 <body>
     <h1>Home Page</h1>
     <br>
-    <a href="{% url 'about' %}">About us</a>
+    <a href="">About us</a>
     <hr>
-    <h2>{{ data }}</h2>
+    <h2>List of all conference</h2>
+    <div>
     {% for y in data %}
-        {% if y == 'django' %}
-            <h1>{{ y }}</h1>
-        {% else %}
-            <h4>{{ y }}</h4>
-        {% endif %}
-
+    <div border:1px>
+            <h2>Id:{{ y.id }}<br></h2>
+            <h2>Firstname:{{ y.first_name }}<br></h2>
+            <h2>Lastname:{{ y.lastname }}<br></h2>
+            <h2>biograph:{{ y.bio}}<br></h2>
+            <h2>contact:{{ y.contact }}<br></h2>
+        </div>
     {% endfor %}
-
-
+    </div>
+<h2><a href="/add">add speaker</a></h2>
 </body>
 </html>
