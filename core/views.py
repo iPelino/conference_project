@@ -56,6 +56,20 @@ def conference_details(request, conference_id):
     }
     return render(request, 'conference/conference_details.html', context)
 
+def update_conference(request, conference_id):
+    conference = {
+        'id': conference_id,
+        'name': 'Conference A',
+        'dates': 'June 1-3, 2023',
+        'location': 'City X',
+        'topics': 'Topic 1, Topic 2, Topic 3',
+        'description': 'This is a detailed description of Conference A.',
+    }
+    context = {
+        'conference': conference
+    }
+    return render(request, 'conference/update_conference.html', context)
+
 
 def home_view(request):
     data = ['django', 'laravel', 'asp.net core', 'express']
