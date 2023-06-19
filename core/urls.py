@@ -26,4 +26,6 @@ urlpatterns = [
 
      path("conferences/<int:conference_id>/update/",views.update_conference,name='update'),
 
+     path("conferences/<int:conference_id>/delete/",views.delete_conference,name='delete'),
+
 ]

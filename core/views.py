@@ -142,3 +142,47 @@ def update(request,conference_id):
 
 
 
+
+def delete_conference(request,conference_id):
+    data=[
+    {
+        "id": 1,
+        'name': 'Gisenyi Conference',
+        'dates': '2023-06-25',
+        'location': 'Gisenyi'
+    },
+    {
+       "id": 2,
+        'name': 'Gasabo Conference',
+        'dates': '2023-07-01',
+        'location': 'Kigali'
+    },
+    {
+        "id": 3,
+        'name': 'Kicukiro Conference',
+        'dates': '2023-07-20',
+        'location': 'Kigali'
+    },
+    {
+       "id": 4,
+        'name': 'Nyarugenge Conference',
+        'dates': '2023-08-01',
+        'location': 'Kigali'
+    },
+    {
+         "id": 5,
+        'name': 'Huye Conference',
+        'dates': '2023-08-20',
+        'location': 'Huye'
+    }
+]
+    for item in data:
+        if (item["id"] == conference_id):
+            selectedData = item
+    return render(request, 'delete.html',{"data":selectedData})
+
+
+
+
+
+
