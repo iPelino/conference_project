@@ -13,7 +13,7 @@
     <ul>
     {% for key,conference in conferences.items %}
         <li>
-            <h3>{{ conference.name }}</h3>
+           <a href="{% url 'conference_detail' key %}"> <h3>{{ conference.name }}</h3></a>
             <p>{{ conference.date }}</p>
             <p>{{ conference.location }}</p>
         </li>
