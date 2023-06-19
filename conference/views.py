@@ -42,6 +42,8 @@ def create_conference_view(request):
     return render(request, 'createConference.html')
 def conference_id(request,id):
     return render(request, 'conferenceId.html')
+def conference_update(request,id):
+    return render(request, 'conferenceUpdate.html')
 
 
 
