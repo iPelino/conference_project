@@ -9,5 +9,8 @@ def speaker_list(request):
         {"id": 4, "name": "Speaker 4", "bio": "Bio 4", "contact": "Contact 4"},
         {"id": 5, "name": "Speaker 5", "bio": "Bio 5", "contact": "Contact 5"},
     ]
-    return
+    return render(request, 'speakers/speaker_list.html', {'speakers': speakers})
+
+def create_speaker(request):
+    return render(request, 'speaker/create_speaker.html')
 # Create your views here.
