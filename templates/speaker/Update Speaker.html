@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Speaker</title>
+</head>
+<body>
+ <label for="name">Name:</label>
+<h1>Update Speaker</h1>
+<form method="post" action="{% url 'speakers:update_speaker' speaker.id %}">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ speakers.name }}" required>
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" required>{{ speakers.bio }}</textarea>
+
+            <label for="contact">Contact Information:</label>
+            <input type="text" id="contact" name="contact" value="{{ speakers.contact }}" required>
+
+            <input type="submit" value="Update Speaker">
+        </form>
+    </form>
+</body>
+</html>
