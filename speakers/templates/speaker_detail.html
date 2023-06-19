@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ speaker.name }}</h1>
+  <p>{{ speaker.bio }}</p>
+  <p>Contact: {{ speaker.contact_info }}</p>
+  
+  <a href="{% url 'speakers:speaker_update' speaker.id %}">Edit Speaker</a>
+  <a href="{% url 'speakers:speaker_delete' speaker.id %}">Delete Speaker</a>
+  
+{% endblock %}

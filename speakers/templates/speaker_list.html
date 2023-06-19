@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>List of Speakers</h1>
+  
+  {% for speaker in speakers %}
+    <div>
+      <h3>{{ speaker.name }}</h3>
+      <p>{{ speaker.bio }}</p>
+      <p>Contact: {{ speaker.contact_info }}</p>
+    </div>
+    <hr>
+  {% empty %}
+    <p>No speakers found.</p>
+  {% endfor %}
+  
+{% endblock %}
