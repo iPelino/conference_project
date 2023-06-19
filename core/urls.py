@@ -7,6 +7,7 @@ urlpatterns = [
     path('speakers/create', views.create, name='Create speaker'),
     path('speakers/<int:speaker_id>/',views.speakers_details, name='detail'),
     path('speakers/<int:speaker_id>/update/',views.update_speaker,name='update'),
+    path('speakers/<int:speaker_id>/delete/',views.delete_speaker,name='delete'),
     path('<str:number>/', views.testing_stuff, name='testing'),
     # path('<pk:id>/', views.testing_stuff, name='testing'),
     # path('<slug:slug>/', views.testing_stuff, name='testing'),
