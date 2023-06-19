@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete {{conference.name}}</title>
+</head>
+<style>
+    * {
+        font-size: 62.5%;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: auto;
+        min-height: 90vh;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 5rem 0;
+        gap: 4rem;
+    }
+
+    .conference_details_container {
+        max-width: 80%;
+        width: fit-content;
+        min-height: 30vh;
+        margin: 0 auto;
+        padding: 5rem;
+        border-radius: .5rem;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    }
+
+    .conference_details_container h1 {
+        font-size: 5rem;
+        padding: 2rem 0;
+        background-image: linear-gradient(to right, red, black, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .conference_details_container p {
+        font-size: 2rem;
+        padding: 1rem 0;
+    }
+
+    .conference_delete {
+        padding: 1rem 2rem;
+        background-color: red;
+        color: white;
+        outline: none;
+        border: none;
+        font-size: 2rem;
+        border-radius: .5rem;
+        cursor: pointer;
+    }
+
+    .conference_delete:hover {
+        transform: scale(1.02);
+    }
+
+    .conference_delete_form {
+        margin: 2rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="conference_details_container">
+        <h1>{{conference.name}}</h1>
+        <p>Date: {{conference.date}}</p>
+        <p>Venue: {{conference.city}}</p>
+        <p>Number of participants: {{conference.attendees}}</p>
+        <form action="/conferences/{{conference.id}}/delete" class="conference_delete_form" method="POST">
+            <input class="conference_delete" type="submit" value="Delete">
+        </form>
+    </div>
+</body>
+
+</html>
