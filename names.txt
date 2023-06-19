@@ -1,0 +1,3 @@
+reg_number:221002012
+name:IKIREZI Umunyana Honorine
+department:computer science
