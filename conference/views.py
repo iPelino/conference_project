@@ -36,3 +36,5 @@ conferences = [
 def conferences_list(request):
     return render(request,'dataconference.html' ,context={"conferences": conferences})
 
+def create_new_conference(request):
+    return render(request, "new_conference.html")
