@@ -45,6 +45,9 @@ def all_conference_view(request):
 ]
     return render(request,'conference.html',{"data":data})
 
+def new_conference(request):
+    return render(request, 'create.html')
+
 
 def testing_stuff(request, number):
     # DB query
