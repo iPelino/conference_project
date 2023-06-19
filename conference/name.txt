@@ -1,0 +1,5 @@
+name: Sheja kevin
+
+regNo: 22006864
+
+Department: Computer Science
