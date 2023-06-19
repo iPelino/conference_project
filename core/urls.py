@@ -21,4 +21,6 @@ urlpatterns = [
 
     path('conferences/create/',views.new_conference,name='create'),
 
+     path("conferences/<int:conference_id>/",views.conference_detail,name='detail'),
+
 ]
