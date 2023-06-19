@@ -8,3 +8,6 @@ class Conference(models.Model):
     dates = models.DateField()
     location = models.CharField(max_length=100)
     topics = models.TextField()
+
+
+

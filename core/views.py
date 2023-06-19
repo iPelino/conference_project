@@ -10,7 +10,6 @@ def home_view(request):
 def about_view(request):
     return HttpResponse("<h1>About Page</h1><br><a href='/'>Go back to home</a>")
 
-
 def testing_stuff(request, number):
     # DB query
     #
