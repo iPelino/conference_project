@@ -10,6 +10,7 @@ urlpatterns = [
     # www.conference.rw/about/
     path('about/', views.about_view, name='about'),
 
-    path('myconferences/', views.all_my_conferences, name='Conference list'),
+    path('conferences/', views.all_conferences, name='all_conferences'),
     path('conferences/create/', views.new_conference, name='new_conference'),
+    path('conferences/<int:conference_id>/', views.conference_detail, name='conference_detail'),
 ]
