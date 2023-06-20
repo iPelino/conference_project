@@ -32,6 +32,10 @@ def conference_details(request, conference_id):
        conference = conference.objects.get(id=conference_id)
        return render(request, 'conference/conference_detail.html', {'conference': conference})
      
+
+def conference_update(request, conference_id):
+      conference = conference.objects.get(id=conference_id)
+      return render(request, 'conference/conference_updates.html', {'conference': conference})    
           
 
 
