@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conference project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+        integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="text-center"><a href="/speakers" title="home">speakers</a></h1>
+    </header>
+
+    <main class="main-contents">
+        <div class="container">
+            {% if speaker %}
+            <div class="d-flex justify-content-between">
+                <h1>
+                    {{ speaker.name }}
+                </h1>
+                <div class="buttons">
+                    <a href="/speakers/{{ speaker.id }}/update" class="btn btn-secondary">update</a>
+                    <a href="/speakers/{{ speaker.id }}/delete" class="btn btn-secondary">delete</a>
+                </div>
+            </div>
+            <div class="conference-card mb-2">
+                <div class="d-flex align-items-center">
+                    <div class="left-box p-4 col-4">
+                        <div class="date">
+                            <img src="{% static 'images/images.png' %}" width="100px" height="100px"
+                                style="border-radius: 50%;" alt="">
+                        </div>
+                    </div>
+                    <div class="desc d-flex justify-content-between px-4 col-8">
+                        <div>
+                            <div class="title">
+                                {{ speaker.name }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2">
+                <h3>About</h3>
+                <p>{{speaker.bio}}</p>
+            </div>
+
+            {% else %}
+            <h1 class="text-center">SPEAKER NOT FOUND</h1>
+            {% endif %}
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>

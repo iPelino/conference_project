@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0efef;
+    font-size: medium;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+main {
+    margin-top: 2em;
+}
+
+main h1 {
+    margin-bottom: .6em;
+}
+
+.conference-card {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.location {
+    color: #fff;
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+.date {
+    color: #fdfdfd;
+}
+
+.left-box {
+    background-color: rgb(67, 65, 79);
+}
+
+.desc .title {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header a {
+    color: rgb(40, 40, 44);
+    text-decoration: none;
+}
