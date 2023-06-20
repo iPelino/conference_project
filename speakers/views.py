@@ -13,4 +13,6 @@ def speaker_list(request):
 def create_speaker(request):
     return render(request, 'speakers/create_speaker.html')
 def speaker_details(request, speaker_id):
-    return render(request), 'speakers/speaker_details.html', {'speakers': speakers}
+    return render(request, 'speakers/speaker_details.html', {'speakers': speakers})
+def update_speaker(request, speaker_id):
+    return render(request, 'speakers/update_speaker.html', {'speakers': speakers})
