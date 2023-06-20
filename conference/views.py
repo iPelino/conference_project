@@ -53,3 +53,7 @@ def update (request, id: int):
     conference = list(filter(lambda c: c['id'] == id, conferences))[0]
     return render (request, "conferenceUpdate.html", { "conference": conference })
 
+
+def delete (request, id: int):
+    conference = list(filter(lambda c: c['id'] == id, conferences))[0]
+    return render (request, "deleteConference.html", { "conference": conference })
