@@ -1,0 +1,7 @@
+<!-- speakers/templates/speakers/speaker_delete.html -->
+<h1>Delete Speaker</h1>
+<p>Are you sure you want to delete {{ speaker.name }}?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Yes, delete</button>
+</form>
