@@ -1,0 +1,3 @@
+Name: Musirikare Peter
+regNumber: 221002205
+Department: Information technology
