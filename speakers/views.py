@@ -15,3 +15,12 @@ def speaker_list(request):
 
 def create_speaker(request):
     return(request, 'speakers/create_speaker.html')
+
+def speaker_details(request, speaker_id):
+    speaker = {"id": speaker_id, "name": "Speaker", "bio": "Bio", "contact": "Contact"}
+    return render(request, "speakers/speaker_details.html", {"speaker": speaker})
+def update_speaker(request, speaker_id):
+    # Retrieve speaker information based on speaker_id (dummy data)
+    speaker = {"id": speaker_id, "name": "Speaker", "bio": "Bio", "contact": "Contact"}
+    return render(request, "speakers/update_speaker.html", {"speaker": speaker})
+
