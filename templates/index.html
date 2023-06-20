@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1 {
+            color: yellow;
+            text-align: center;
+        }
+    </style>
+    <h1>All Conferences</h1>
+    <ol>
+        {% for conference in conferences %}
+            <li><h2> Conference no.:{{conference.id}}</h2>
+                <ul>
+                    <li>Name: <strong>{{conference.name}}</strong> </li><br>
+                    <li>Date: <strong>{{conference.date}}</strong> </li><br>
+                    <li>Location: <strong>{{conference.location}}</strong> </li>
+                </ul>
+            </li>
+        {% endfor %}    
+    </ol>
+</body>
+</html>
