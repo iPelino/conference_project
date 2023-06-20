@@ -1,0 +1,12 @@
+from django.shortcuts import render
+
+# Create your views here.
+speakers = [
+        {'name': 'Nadia', 'bio' : 'IT support', 'contact': '0783243222', 'id': 1},
+        {'name': 'Jim', 'bio' : 'IT support', 'contact': '0783243222', 'id': 2},
+        {'name': 'Nadjima', 'bio' : 'IT support', 'contact': '0783243222', 'id': 3},
+        {'name': 'John', 'bio' : 'IT support', 'contact': '0783243222', 'id': 4},
+        {'name': 'Albertine', 'bio' : 'IT support', 'contact': '0783243222', 'id': 5},
+    ]
+def speaker_list(request):
+    return render(request, 'speakers/speakers_list.html', {'speakers': speakers})
