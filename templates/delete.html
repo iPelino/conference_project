@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        h2 {
+            font-size: 18px;
+            color: orange;
+        }
+        form {
+            width: 450px;
+        }
+        label {
+            display: block;
+        }
+        button {
+            width: 100%;
+            height: 40px;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+    <div style="padding: 5% 10%; ">
+        <form action="" styles="width: 200px; padding: 15px;">
+            <h2>Comfirm deleting this conference</h2>
+            <label for="" >
+                Name<BR>
+                <h3>{{conference.name}}</h3>
+            </label>
+            <label for="" >
+                Date<BR>
+                <h3>{{conference.date}}</h3>
+            </label>
+            <label for="" >
+                Location<BR>
+                <h3>{{conference.location}}</h3>
+            </label>
+            <label for="" >
+                Topic<BR>
+                <h3>{{conference.topic}}</h3>
+            </label>
+            <button >Delete </button>
+        </form>
+    </div>
+</body>
+</html>
