@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update your speaker </title>
+</head>
+<body>
+<form>
+    {% for speaker in speaker: %}
+        {% if id == speaker_id %}
+            <input type="text" value="speakers.name" id="name">
+            <input type="text" value="speakers.bio" id="bio">
+            <input type="number" value="speakers.contact" id="contact">
+        {% endif %}
+    {% endfor %}        
+    
+    </form>
+</form>
+</body>
+</html>

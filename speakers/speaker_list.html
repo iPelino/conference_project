@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>speakers list</title>
+</head>
+<body>
+    <h1>Our speakers</h1>
+    {% for speaker in speakers %}
+    <h2>{{speakers.name}}</h2>
+    <p>{{speaker.bio}}</p>
+    <p>contact: {{ speakers.contact }}</p>
+    {% endfor %}
+</body>
+</html>
