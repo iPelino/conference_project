@@ -1,0 +1,12 @@
+<!-- speakers/templates/speakers/speaker_update.html -->
+<h1>Update Speaker</h1>
+<form method="post">
+  {% csrf_token %}
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" value="{{ speaker.name }}"><br>
+  <label for="bio">Bio:</label>
+  <textarea name="bio" id="bio">{{ speaker.bio }}</textarea><br>
+  <label for="contact_info">Contact Information:</label>
+  <input type="text" name="contact_info" id="contact_info" value="{{ speaker.contact_info }}"><br>
+  <button type="submit">Update</button>
+</form>
