@@ -21,7 +21,7 @@ from core import views
 
 urlpatterns = [
     # all root urls should point to the
-    path('', include('conference.urls')),
+    path('speakers/', include('speakers.urls')),
 
     # www.conference.rw/admin/
     path('admin/', admin.site.urls),

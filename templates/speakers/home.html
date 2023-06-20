@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Conference project</title>
+    <title>speaker project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
         integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,44 +17,39 @@
 
 <body>
     <header class="header">
-        <h1 class="text-center"><a href="/" title="home">Conference app</a></h1>
+        <h1 class="text-center"><a href="/" title="home">SPEAKERS</a></h1>
     </header>
 
     <main class="main-contents">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <h1>
-                    Upcoming conferences
+                    All speakers
                 </h1>
-                <a href="/conferences/create/" class="btn btn-success">new conference</a>
+                <a href="/speakers/create/" class="btn btn-success">new speaker</a>
             </div>
             {% if message %}
             <div class="messages-wrapper mb-3">
                 <div class="alert alert-success">{{ message }}</div>
             </div>
             {% endif %}
-            {% for conference in conference_list %}
-            <div class="conference-card mb-2">
+            {% for speaker in speaker_list %}
+            <div class="speaker-card mb-2">
                 <div class="d-flex align-items-center">
-                    <div class="left-box p-4 col-4">
-                        <div class="date">
-                            {{ conference.date_time }}
-                        </div>
+                    <div class="left-box p-4">
                         <div class="location">
-                            {{ conference.location }}
+                            <img src="{% static 'images/images.png' %}" width="100px" height="100px"
+                                style="border-radius: 50%;" alt="">
                         </div>
                     </div>
-                    <div class="desc d-flex justify-content-between px-4 col-8">
+                    <div class="desc d-flex justify-content-between px-4">
                         <div>
                             <div class="title">
-                                {{ conference.title }}
-                            </div>
-                            <div class="host">
-                                hosted by {{ conference.hosting_organization }}
+                                {{ speaker.name }}
                             </div>
                         </div>
                         <div class="btn">
-                            <a href="/conferences/{{conference.id}}" class="btn btn-secondary">learn more</a>
+                            <a href="/speakers/{{speaker.id}}" class="btn btn-secondary">learn more</a>
                         </div>
                     </div>
                 </div>
