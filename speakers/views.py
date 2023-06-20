@@ -16,3 +16,5 @@ def speaker_details(request, speaker_id):
     return render(request), 'speakers/speaker_details.html', {'speakers': speakers}   
 def update_speaker(request, speaker_id):
     return render(request, 'speakers/update_speaker.html', {'speakers': speakers}) 
+def delete_speaker(request, speaker_id):
+    return render(request, 'speaker/delete_speaker.html', {'speakers': speakers})
