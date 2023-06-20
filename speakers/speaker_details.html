@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Details</title>
+</head>
+<body>
+    {% for speaker in speakers %}
+        {% if id == speaker_id %}
+            <h2>{{ speakers.name }}</h2>
+            <p>{{ speakers.bio }}</p>
+            <p>Contact: {{ speakers.contact}}</p>
+        {% endif %}
+    {% endfor %}    
+</body>
+</html>
