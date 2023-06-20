@@ -22,7 +22,8 @@ urlpatterns = [
     # www.conference.rw/admin/
     path('admin/', admin.site.urls),
 
+    path('conferences/', include('conference.urls')),
+    path('', include('core.urls')),
 
-    path('', include('core.urls'))
 
 ]
