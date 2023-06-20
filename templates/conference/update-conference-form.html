@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conference project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+        integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="text-center"><a href="/" title="home"></a>Conference app</a></h1>
+    </header>
+
+    <main class="main-contents">
+        <div class="container">
+            <h2>Update a meeting</h2>
+            <form method="post" action="/conferences/{{conference.id}}/update/">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="title" class="form-label">Conference Title</label>
+                    <input type="text" class="form-control" id="title" name="title" value="{{ conference.title }}"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date and Time</label>
+                    <input type="datetime-local" class="form-control" id="date" name="date"
+                        value="{{ conference.date_time }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="location" name="location"
+                        value="{{ conference.location }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="organization" class="form-label">Hosting Organization</label>
+                    <input type="text" class="form-control" id="organization" name="organization"
+                        value="{{ conference.hosting_organization }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="id" class="form-label">Conference ID</label>
+                    <input type="number" class="form-control" id="id" name="id" value="{{ conference.id }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="topics" class="form-label">Topics</label>
+                    <input type="text" class="form-control" id="topics" name="topics" value="{{ conference.topics }}"
+                        required>
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>

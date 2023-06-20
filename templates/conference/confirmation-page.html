@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conference project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+        integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="text-center"><a href="/" title="home">Conference app</a></h1>
+    </header>
+
+    <main class="main-contents">
+        <div class="container">
+            <h1 class="mt-5">Delete Confirmation</h1>
+            <p>Are you sure you want to delete the conference?</p>
+
+            <form method="post" action="/conferences/{{conference.id}}/delete" class="mb-3">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger mr-2">Delete</button>
+                <a href="/" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>
