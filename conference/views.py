@@ -49,3 +49,7 @@ def conference_by_id (request, id: int):
     return render (request, "singleConference.html", { "conference": conference })
 
 
+def update (request, id: int):
+    conference = list(filter(lambda c: c['id'] == id, conferences))[0]
+    return render (request, "conferenceUpdate.html", { "conference": conference })
+
