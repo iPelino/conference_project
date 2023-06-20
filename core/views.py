@@ -20,6 +20,6 @@ def testing_stuff(request, number):
     return render(request, 'testing.html', {'number': number})
 
     def all_my_conferences(request):
-      myconferences = Conference.objects.all()  
-      return render(request, 'conference/myconferences.html', {'myconferences': myconferences})
+      conferences = Conference.objects.all()  
+      return render(request, 'conference/conferences.html', {'conferences': conferences})
  
