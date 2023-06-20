@@ -18,3 +18,8 @@ def testing_stuff(request, number):
     # if id < 5:
     #     number = 'xzy'
     return render(request, 'testing.html', {'number': number})
+
+    def all_my_conferences(request):
+      myconferences = Conference.objects.all()  
+      return render(request, 'conference/myconferences.html', {'myconferences': myconferences})
+ 
