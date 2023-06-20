@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create_speaker</title>
+</head>
+<body>
+<h1>List of Speakers</h1>
+<ul>
+  {% for speaker in speakers %}
+    <li>{{ speaker.name }} - {{ speaker.bio }}</li>
+  {% endfor %}
+</ul>
+</body>
+</html>
