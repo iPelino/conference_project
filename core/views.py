@@ -37,6 +37,8 @@ def conference_update(request, conference_id):
       conference = conference.objects.get(id=conference_id)
       return render(request, 'conference/conference_updates.html', {'conference': conference})    
           
-
+def conference_delete(request, conference_id):
+      conference = conference.objects.get(id=conference_id)
+      return render(request, 'conference/conference_delete.html', {'conference': conference})
 
  
