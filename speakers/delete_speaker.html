@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+<body>
+    <h1>Delete Speaker</h1>
+    <p>Are you sure you want to delete the speaker "{{ speakers.name }}"?</p>
+    <form>
+    {% for speaker in speakers %}
+        {% if speaker.id == speaker_id %}
+            {{ speakers.delete(speaker_id) }}
+        {% endif %}
+    {% endfor %}
+    {{speakers}}   
+    <input type="submit" value="Delete">
+</form>
+</body>
+</html>
