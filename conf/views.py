@@ -96,3 +96,18 @@ def update_speaker(request,id):
         if spek["id"] == int(id):
             speaker = spek
     return render(request, "updateSpeaker.html",{"speaker": speaker})
+
+
+
+def delete_speaker(request,id):
+    for spek in speakers:
+        if spek["id"] == int(id):
+            speaker = spek
+    return render(request, "deletespeaker.html",{"speaker": speaker})
+def delete_speaker_confirm(request,id):
+    for spek in speakers:
+        if spek["id"] == int(id):
+            speaker = spek
+            # delete speaker
+            speakers.remove(speaker)
+    return render(request, "confirmdelete.html",{"speaker": speaker})
