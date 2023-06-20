@@ -14,54 +14,45 @@
 
 <body>
     <header class="header">
-        <h1 class="text-center"><a href="/" title="home">Conference app</a></h1>
+        <h1 class="text-center"><a href="/speakers" title="home">speakers</a></h1>
     </header>
 
     <main class="main-contents">
         <div class="container">
-            {% if conference %}
+            {% if speaker %}
             <div class="d-flex justify-content-between">
                 <h1>
-                    {{ conference.title }}
+                    {{ speaker.name }}
                 </h1>
                 <div class="buttons">
-                    <a href="/conferences/{{ conference.id }}/update" class="btn btn-secondary">update</a>
-                    <a href="/conferences/{{ conference.id }}/delete" class="btn btn-secondary">delete</a>
+                    <a href="/speakers/{{ speaker.id }}/update" class="btn btn-secondary">update</a>
+                    <a href="/speakers/{{ speaker.id }}/delete" class="btn btn-secondary">delete</a>
                 </div>
             </div>
             <div class="conference-card mb-2">
                 <div class="d-flex align-items-center">
                     <div class="left-box p-4 col-4">
                         <div class="date">
-                            {{ conference.date_time }}
-                        </div>
-                        <div class="location">
-                            {{ conference.location }}
+                            <img src="{% static 'images/images.png' %}" width="100px" height="100px"
+                                style="border-radius: 50%;" alt="">
                         </div>
                     </div>
                     <div class="desc d-flex justify-content-between px-4 col-8">
                         <div>
                             <div class="title">
-                                {{ conference.title }}
-                            </div>
-                            <div class="host">
-                                hosted by {{ conference.hosting_organization }}
+                                {{ speaker.name }}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="p-2">
-                <h3>Topics</h3>
-                <ul>
-                    {% for topic in conference.topics %}
-                    <li>{{ topic }}</li>
-                    {% endfor %}
-                </ul>
+                <h3>About</h3>
+                <p>{{speaker.bio}}</p>
             </div>
 
             {% else %}
-            <h1 class="text-center">CONFERENCE NOT FOUND</h1>
+            <h1 class="text-center">SPEAKER NOT FOUND</h1>
             {% endif %}
         </div>
     </main>

@@ -17,46 +17,29 @@
 
 <body>
     <header class="header">
-        <h1 class="text-center"><a href="/" title="home"></a>Conference app</a></h1>
+        <h1 class="text-center"><a href="/speakers" title="home"></a>speakers</a></h1>
     </header>
 
     <main class="main-contents">
         <div class="container">
-            <h2>Update a meeting</h2>
-            <form method="post" action="/conferences/{{conference.id}}/update/">
+            <h2>Update a speaker info</h2>
+            <form method="post" action="/speakers/{{ speaker.id }}/update/">
                 {% csrf_token %}
                 <div class="mb-3">
-                    <label for="title" class="form-label">Conference Title</label>
-                    <input type="text" class="form-control" id="title" name="title" value="{{ conference.title }}"
-                        required>
+                    <label for="name" class="form-label">Speaker Name</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{ speaker.name }}" required>
                 </div>
                 <div class="mb-3">
-                    <label for="date" class="form-label">Date and Time</label>
-                    <input type="datetime-local" class="form-control" id="date" name="date"
-                        value="{{ conference.date_time }}" required>
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" value="{{ speaker.address }}" required>
                 </div>
                 <div class="mb-3">
-                    <label for="location" class="form-label">Location</label>
-                    <input type="text" class="form-control" id="location" name="location"
-                        value="{{ conference.location }}" required>
-                </div>
-                <div class="mb-3">
-                    <label for="organization" class="form-label">Hosting Organization</label>
-                    <input type="text" class="form-control" id="organization" name="organization"
-                        value="{{ conference.hosting_organization }}" required>
-                </div>
-                <div class="mb-3">
-                    <label for="id" class="form-label">Conference ID</label>
-                    <input type="number" class="form-control" id="id" name="id" value="{{ conference.id }}" required>
-                </div>
-                <div class="mb-3">
-                    <label for="topics" class="form-label">Topics</label>
-                    <input type="text" class="form-control" id="topics" name="topics" value="{{ conference.topics }}"
-                        required>
+                    <label for="bio" class="form-label">Bio</label>
+                    <textarea class="form-control" id="bio" name="bio" required>{{ speaker.bio }}</textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>
-
+            
         </div>
     </main>
 
