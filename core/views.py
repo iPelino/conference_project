@@ -29,7 +29,10 @@ def new_conference(request):
         return render(request, 'conference/new_conference.html')
 
 def conference_details(request, conference_id):
-       conference = conference.objects.get(id=conference_id)
+       conference = {"name": "Conference 1", "dates": "March 1-3, 2023", "location": "Kacyiru"}
+       conference = {"name": "Conference 2", "dates": "March 1-3, 2023", "location": "Nyamata"}
+       conference = {"name": "Conference 3", "dates": "March 1-3, 2023", "location": "Huye"}
+       conference = {"name": "Conference 4", "dates": "March 1-3, 2023", "location": "Muhanga"}
        return render(request, 'conference/conference_detail.html', {'conference': conference})
      
 
