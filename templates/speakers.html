@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>speakers for every one</h1>
+    <div>
+     
+      <div>
+        <h1>list of all speakers</h1>
+        <table>
+          <thead>
+            <tr></thead>
+              <th>id</th>
+              <th>name</th>
+              <th>email</th>
+              <th>bio</th></tr>
+              <tbody>
+                {% for speaker in speakers%}
+                <tr><td>{{ speaker.id }}</td>
+                  <td><a href="/speakers/{{ speaker.id }}">{{ speaker.name }}</a></td>
+                  <td>{{ speaker.email}}</td>
+                  <td>{{ speaker.bio}}</td>
+                </tr>
+              </tbody>
+              {%endfor%}
+        </table>
+      
+      
+    </div>
+  </body>
+</html>
