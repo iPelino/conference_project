@@ -11,4 +11,5 @@ urlpatterns = [
     path('about/', views.about_view, name='about'),
 
     path('myconferences/', views.all_my_conferences, name='Conference list'),
+    path('conferences/create/', views.new_conference, name='new_conference'),
 ]
