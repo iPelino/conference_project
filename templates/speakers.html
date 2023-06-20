@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>speakers for every one</h1>
+    <div>
+      {% for speaker in speakers%}
+      <div>
+        <h5>
+          {{ speaker.id }} --<a href="/speakers/{{ speaker.id }}"
+            >{{ speaker.name }}</a
+          >--{{ speaker.bio }}
+        </h5>
+      </div>
+      {%endfor%}
+    </div>
+  </body>
+</html>
