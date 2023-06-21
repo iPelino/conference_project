@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input
+        type="text"
+        placeholder="name"
+        value="{{ speaker.name }}"
+      /><br /><br />
+      <input
+        type="email"
+        placeholder="email"
+        value="{{ speaker.email }}"
+      /><br /><br />
+      <textarea rows="10" cols="50">{{ speaker.bio }}</textarea><br /><br />
+      <button>update speaker</button>
+    </form>
+  </body>
+</html>
