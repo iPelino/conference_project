@@ -1,5 +1,8 @@
-# conference_project
+# Conference_project
 Class project for a Conference management App
+Name: 
+Registration Number:
+Department: 
 
 ## Scenario
 ===========
@@ -34,4 +37,6 @@ of conferences, manage speakers, and facilitate efficient scheduling for attende
 3. Design and create required data models in django for both conferences and speakers.
 4. Add at least 10 dummy data for each of the models you will create.
 5. Ensure that your database file is pushed with your project. (by default is it left out by the .gitignore)
+
+PS: Don't forget to add your name, department and registration number.
 
