@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for conferences in conference%}
+<h1>{{conferences.name}}</h1>
+<p>date:{{conferences.date}}</p>
+<p>location:{{conferences.date}}</p>
+<p>name:{{conferences.name}}</p>
+<hr>
+{%empty%}
+<p>conferences not available</p>
+{%end for%}
+br
+<!-- Render the static form for creating a new conference -->
+<form>
+    <!-- Form fields for conference details -->
+</form>
+br
+<h2>{{ conference.name }}</h2>
+<p>Dates: {{ conference.dates }}</p>
+<p>Location: {{ conference.location }}</p>
+<p>Topics: {{ conference.topics }}</p>
+<!-- Other conference details -->
+br
+<!-- Render the form for updating the conference with pre-filled static dummy information -->
+<form>
+    <!-- Form fields with pre-filled information from `conference` object -->
+</form>
+br
+<h3>confirm conference deletion</h3>>
+</body>
+</html>
