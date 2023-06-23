@@ -1,8 +1,8 @@
 # Conference_project
 Class project for a Conference management App <br>
-Name: <br>
-Registration Number: <b>
-Department: <br>
+## Name:
+## Registration Number
+## Department:
 
 ## Scenario
 =========== <br>
