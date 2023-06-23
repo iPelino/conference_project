@@ -1,11 +1,11 @@
 # Conference_project
 Class project for a Conference management App
-Name: 
-Registration Number:
-Department: 
+Name: <br>
+Registration Number: <b>
+Department: <br>
 
 ## Scenario
-===========
+=========== <br>
 You have been assigned to develop a conference management system for a prestigious event management company. <br>
 The goal of the project is to create a robust platform that will streamline the organization and scheduling <br>
 of conferences, manage speakers, and facilitate efficient scheduling for attendees.<br>
@@ -31,7 +31,7 @@ of conferences, manage speakers, and facilitate efficient scheduling for attende
    session popularity, and speaker ratings. These insights help event managers make informed decisions for future conferences.
 
 ## Assignment - June 2023
-====================
+========================= <br>
 1. Create two django apps; Conferences and Speakers (if they're not already created in the project template)
 2. Based on the above scenario plan the url patterns for both conferences and speakers that you think would be needed for the above functionalities.
 3. Design and create required data models in django for both conferences and speakers.
