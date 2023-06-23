@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Biographic form</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+         <legend><b>Biographical Information</b></legend><br>
+       <div>
+        <label for="gender">First Name: </label>
+             <input type="text" placeholder="" required><br><br>
+         <label for="gender">Last Name: </label>
+             <input type="text" placeholder="" required><br><br>
+         <label for="gender">Email address: </label>
+             <input type="email" placeholder="" required><br><br>
+        <label for="gender">Home address: </label>
+              <input type="text" placeholder="" required><br><br>
+        <label for="gender">Gender: </label>
+             <input class="gender" type="radio" name="gender" value="male"/>Male
+             <input class="gender"  type="radio" name="gender" value="female">Female<br><br>
+        <label for="date">Birth Date: </label>
+             <input type="date" required><br><br>       
+        <label for="university_list">University Name: </label>
+          <select id="university" name="university">
+             <option id="default">SELECT</option>
+             <option>Mount Kenya University</option>
+             <option>University Of Rwanda</option>
+             <option>Adventist University of Central Africa</option>
+             <option>University Of Kigali</option>
+             <option>University Of Tourism and Bussiness</option>
+             <option>Kigali Institute of Technology</option>
+          </select><br><br>
+          <label for="modules">University Modules: <br></label>
+             <input type="checkbox" name="modules">Information Technology<br>
+             <input type="checkbox" name="modules">Acoounting Management<br>
+             <input type="checkbox" name="modules">Business administration<br>
+             <input type="checkbox" name="modules">Artificial Intelligence<br>
+             <input type="checkbox" name="modules">Computer Science<br>
+             <input type="checkbox" name="modules">Software Enginnering <br><br>
+         <label for="colors">Favourite Colour: </label>
+              <input type="color"> <br><br> 
+          <input type="submit" value="Create form"/>         
+       </div>
+     </fieldset> 
+     </form>
+     <style>
+        fieldset{
+    background-color: pink;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 65%;
+    border: 4px solid purple;
+    border-radius: 10px;
+    box-shadow: 3px 12px 15px green;
+    }
+    body{
+    background-color: whitesmoke;
+    }
+    input{
+    border-radius: 5px;
+    border: 0px solid grey;
+    padding: 4px;
+    box-shadow: 2px 5px 6px;
+   }
+     </style>
+</body>
+</html>
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update | Biographical Information</title>
+
+    <style>
+      body {
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      form {
+        gap: 15px;
+        width: 50%;
+        margin: auto;
+        margin-top: 40px;
+        text-align: left;
+      }
+
+      form div,
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      form input,
+      button,
+      textarea {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Update Biographical Information</h1>
+    <hr />
+
+    <form>
+      <div>
+        <label>Name</label>
+        <input
+          type="text"
+          placeholder="Enter name..."
+          value="{{ speaker.name }}"
+        />
+      </div>
+
+      <div>
+        <label>ID number</label>
+        <input
+          type="text"
+          placeholder="Enter Email..."
+          value="{{speaker.email}}"
+        />
+      </div>
+
+      <div>
+        <label>Address</label>
+        <input
+          type="text"
+          placeholder="Enter location..."
+          value="{{ speaker.country}}"
+        />
+      </div>
+
+      <div>
+        <label>Date of Birth</label>
+
+        <input
+          type="date"
+          placeholder="Enter birthdate..."
+          value="{{ speaker.birthdate }}"
+        />
+      </div>
+
+      <div>
+        <label for="university_list">University Name: </label>
+          <select id="university" name="university">
+             <option id="default">SELECT</option>
+             <option>Mount Kenya University</option>
+             <option>University Of Rwanda</option>
+             <option>Adventist University of Central Africa</option>
+             <option>University Of Kigali</option>
+             <option>University Of Tourism and Bussiness</option>
+             <option>Kigali Institute of Technology</option>
+          </select>
+      <button type="button">Save Updates</button>
+    </form>
+  </body>
+</html>
