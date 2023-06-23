@@ -1,0 +1,13 @@
+<form action="{% url 'conference_list' %}" method="POST">
+  {% csrf_token %}
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" />
+  <label for="date">Date:</label>
+  <input type="date" name="date" id="date" />
+  <label for="location">Location:</label>
+  <input type="text" name="location" id="location" />
+  <label for="topic">Topic:</label>
+  <input type="text" name="topic" id="topic" />
+
+  <button type="submit">Create Conference</button>
+</form>
