@@ -1,27 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Home Page</h1>
-    <br>
-    <a href="{% url 'about' %}">About us</a>
-    <hr>
-    <h2>{{ data }}</h2>
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+<ul class="list-group">
     {% for y in data %}
         {% if y == 'django' %}
-            <h1>{{ y }}</h1>
+            <li class="list-group-item active">{{ y }}</li>
         {% else %}
-            <h4>{{ y }}</h4>
+             <li class="list-group-item">{{ y }}</li>
         {% endif %}
-
     {% endfor %}
-
-
-</body>
-</html>
+</ul>
+</div>
+{% endblock %}
