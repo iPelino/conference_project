@@ -23,9 +23,10 @@ from conference_project.settings import DEBUG
 from core import views
 
 urlpatterns = [
-    # www.conference.rw/admin/
     path('admin/', admin.site.urls),
-    path('', include('core.urls'))
+    path('conferences/', include('conferences.urls')),
+    path('', include('core.urls')),
+    path("__debug__/", include("debug_toolbar.urls")),
 ]
 if DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

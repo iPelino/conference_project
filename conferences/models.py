@@ -27,7 +27,6 @@ class Conference(models.Model):
     description = models.TextField(null=True, blank=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
-    # category = models.CharField(max_length=100, choices=CONF_CATEGORIES)
     category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE

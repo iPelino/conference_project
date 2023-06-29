@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}
+    Conferences
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>All Conferences</h1>
+        <div class="row">
+        {% for conference in conferences %}
+                <div class="col-sm-4">
+                        <div class="card mb-3">
+              <h3 class="card-header">{{ conference.title }}</h3>
+              <img src="{{ conference.conf_logo.url }}" class="img-fluid">
+              <div class="card-body">
+                <p class="card-text">{{ conference.description }}</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{ conference.venue }}</li>
+                <li class="list-group-item">{{ conference.entry_fee}}</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+              <div class="card-footer text-muted">
+                2 days ago
+              </div>
+            </div>
+                </div>
+
+
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}
