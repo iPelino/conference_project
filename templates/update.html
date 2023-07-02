@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Updated Data</title>
+  </head>
+  <body>
+    <form action="submit.php" method="POST">
+      <div>
+        <label for="name">Speaker Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          value="{{data.name}}"
+        />
+      </div>
+      <div>
+        <label for="bios">Bios:</label>
+        <input
+          type="text"
+          id="bios"
+          name="bios"
+          required
+          value="{{data.bios}}"
+        />
+      </div>
+      <div>
+        <label for="location">Location:</label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          required
+          value="{{data.location}}"
+        />
+      </div>
+      <div>
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
