@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>conf_update | Create Conference</title>
+
+      
+  </head>
+  <body>
+    <h1> Conference updated info</h1>
+    <hr/>
+
+    <form>
+        <div>
+            <label>Name: </label>
+            <input type="text" placeholder="Enter name..." value="{{ conference.name }}"/>
+        </div>
+
+        <div>
+            <label>Location: </label>
+            <input type="text" placeholder="Enter location..." value="{{ conference.location}}"/>
+        </div>
+
+        <div>
+            <label>Date: </label>
+
+            <input type="date" placeholder="Enter date..." value="{{ conference.date }}"/>
+        </div>
+
+        <div>
+            <label>Topics: </label>
+            <textarea rows="10" cols="20" placeholder="Enter conference topics..." >{{ conference.topics }}</textarea>
+        </div>
+
+        <button type="button">Update</button>
+    </form>
+
+  </body>
+</html>
