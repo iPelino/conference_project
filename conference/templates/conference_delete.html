@@ -82,7 +82,7 @@
         <p>Number of participants: {{conference.attendees}}</p>
         <form action="{% url 'conference_delete_confirm' conference.id %}" class="conference_delete_form" method="POST">
             {%csrf_token%}
-            <input class="conference_delete" type="submit" value="Delete">
+            <input class="conference_delete" type="submit" value="Confirm Delete">
         </form>
     </div>
 </body>
