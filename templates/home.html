@@ -1,27 +1,75 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Eventr</title>
 </head>
+<style>
+    * {
+        font-size: 62.5%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    article {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 5rem;
+        background: linear-gradient(to right, #89C4E1, #EA4D89, #1A0000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    a {
+        padding: 1rem 2rem;
+        background-color: black;
+        color: white;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: .5rem;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    a:hover {
+        transform: scale(.98);
+    }
+</style>
+
 <body>
-    <h1>Home Page</h1>
-    <br>
-    <a href="{% url 'about' %}">About us</a>
-    <hr>
-    <h2>{{ data }}</h2>
-    {% for y in data %}
-        {% if y == 'django' %}
-            <h1>{{ y }}</h1>
-        {% else %}
-            <h4>{{ y }}</h4>
-        {% endif %}
-
-    {% endfor %}
-
-
+    <article>
+        <h1>Welcome to Eventr</h1>
+        <p>Your conference management solution</p>
+    </article>
+    <a href="/conferences">Continue</a>
 </body>
+
 </html>
